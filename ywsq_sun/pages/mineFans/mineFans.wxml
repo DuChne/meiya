@@ -1,0 +1,11 @@
+<view class="wall"></view>
+<view class="fansList">
+    <view class="no" wx:if="{{fansList.length==0}}">暂时没有粉丝</view>
+    <view bindtap="goHisHome" class="writerMes border_b flex-center rel" data-userid="{{item.user_id}}" wx:for="{{fansList}}">
+        <image class="header" src="{{item.avatar}}"></image>
+        <view class="flex-center flex1">
+            <view class="nickName dot1">{{item.nickname}}</view>
+        </view>
+        <view catchtap="focusTap" class="focus {{item.isFollow==1?'active':''}}" data-index="{{index}}" data-statu="open" data-userid="{{item.user_id}}">{{item.isFollow==1?'已关注':'关注'}}</view>
+    </view>
+</view>

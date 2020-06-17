@@ -1,0 +1,46 @@
+<view class="wall"></view>
+<view>
+    <scroll-view class="scrollView" scrollX="true">
+        <view class="scrollBox">
+            <view class="type-navbar border_b flex-center">
+                <view class="type-box">
+                    <view bindtap="tabClick" class="type-navbar-item {{currentType==0?'type-item-on':''}}" data-index="0">全部</view>
+                </view>
+                <view class="type-box" wx:for="{{allTabs}}" wx:key="id">
+                    <view bindtap="tabClick" class="type-navbar-item {{currentType==index+1?'type-item-on':''}}" data-index="{{index+1}}" data-tabid="{{item.tab_id}}">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="askList">
+        <view bindtap="iAnswer" class="askItem" data-quesid="{{item.question_id}}" wx:for="{{quesList}}">
+            <view class="headerRow flex-center">
+                <view catchtap="goHisHome" data-userid="{{item.user_id}}">
+                    <image class="header" src="{{item.avatar}}"></image>
+                </view>
+                <view class="name">{{item.nickname}}</view>
+                <view class="ask">提问了问题</view>
+            </view>
+            <view class="wenRow flex-center">
+                <view class="wen">问</view>
+                <view class="dot flex1">{{item.title}}</view>
+            </view>
+            <view class="tagRow flex-center">
+                <view class="tag" wx:for="{{item.tab}}" wx:for-item="items">#{{items.tab_name}}#</view>
+            </view>
+            <view class="answerRow flex-center-spa border_t">
+                <view class="meAns">我来回答</view>
+                <view class="flex-center">
+                    <view class="iconBox flex-center">
+                        <image class="iconA" src="../../resource/images/index/hd.png"></image>
+                        <view>{{item.answer}}</view>
+                    </view>
+                    <view class="iconbBox flex-center">
+                        <image class="iconB" src="../../resource/images/index/sc.png"></image>
+                        <view>{{item.collection}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

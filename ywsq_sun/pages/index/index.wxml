@@ -1,0 +1,209 @@
+<!-- <view class="psPage" wx:if="{{ptInfo.showcheck==1}}">
+  <view class="searchWrap flex-center">
+      <view class="searchBox flex-center">
+          <icon type="search"></icon>
+          <input class="inputBox" placeholder="搜你想要的"></input>
+      </view>
+  </view>
+  <view>
+      <image class="bannerImgs" src="http://oydmq0ond.bkt.clouddn.com/shangpin.jpg"></image>
+      <view class="jxBox">
+          <view class="jxTitle">今日精选推荐</view>
+          <view class="jxList flex-center-spa">
+              <view bindtap="goDetailsPs" class="jxItem">
+                  <image class="jxImgs" src="http://oydmq0ond.bkt.clouddn.com/sucai-2.jpg"></image>
+                  <view class="jxName">冬日加厚韩式女外套</view>
+              </view>
+              <view bindtap="goDetailsPs" class="jxItem">
+                  <image class="jxImgs" src="http://oydmq0ond.bkt.clouddn.com/sucai-6.jpg"></image>
+                  <view class="jxName">复古彩色润唇口红</view>
+              </view>
+              <view bindtap="goDetailsPs" class="jxItem">
+                  <image class="jxImgs" src="http://oydmq0ond.bkt.clouddn.com/faxian-1.jpg"></image>
+                  <view class="jxName">加绒韩式牛仔女外套</view>
+              </view>
+              <view bindtap="goDetailsPs" class="jxItem">
+                  <image class="jxImgs" src="http://oydmq0ond.bkt.clouddn.com/sucai-5.jpg"></image>
+                  <view class="jxName">自然润肤粉底</view>
+              </view>
+          </view>
+      </view>
+  </view>
+</view> -->
+<view wx:if="{{ptInfo.showcheck==0}}">
+    <swiper autoplay="{{autoplay}}" circular="{{circular}}" class="swiper_box" duration="{{duration}}" interval="{{interval}}">
+        <swiper-item wx:for="{{banners}}" wx:key="id">
+            <image bindtap="goShopping" class="slide-image" data-index="{{index}}" src="{{item.image}}"></image>
+        </swiper-item>
+    </swiper>
+    <!-- <view class='ya-list'>
+      <view class='buy'>
+        <image class='icon' src='../../resource/images/buya.png'></image>
+        <view class='text'>补牙</view>
+      </view>
+      <view class='buy'>
+        <image class='icon' src='../../resource/images/quanya.png'></image>
+        <view class='text'>镶牙</view>
+      </view>
+      <view class='buy'>
+        <image class='icon' src='../../resource/images/zhenya.png'></image>
+        <view class='text'>整牙</view>
+      </view>
+      <view class='buy'>
+        <image class='icon' src='../../resource/images/zhongya.png'></image>
+        <view class='text'>种牙</view>
+      </view>
+      <view class='buy'>
+        <image class='icon' src='../../resource/images/tiepian.png'></image>
+        <view class='text'>贴片</view>
+      </view>
+    </view> -->
+
+    <!-- <view class="act flex-center-spa">
+        <view bindtap="askQuesTap" class="actItem flex-center-col">
+            <image class="theme_icon" src="../../resource/images/index/tiwen.png"></image>
+            <view>提问题</view>
+        </view>
+        <view bindtap="writeAnswer" class="actItem flex-center-col">
+            <image class="theme_icon" src="../../resource/images/index/huida.png"></image>
+            <view>写回答</view>
+        </view>
+        <view bindtap="showTips" class="actItem flex-center-col">
+            <image class="theme_icon" src="../../resource/images/index/xinde.png"></image>
+            <view>晒心得</view>
+        </view>
+        <view bindtap="goSignIn" class="actItem flex-center-col" data-statu="open">
+            <image class="theme_icon" src="../../resource/images/index/qiandao1.png"></image>
+            <view>爱签到</view>
+        </view>
+    </view> -->
+    <view class='experience-content'>
+      <image class='click-Experience' src='../../resource/images/click_Experience.png'></image>
+    </view>
+    <!-- <view class="tag">
+        <view class="tagTitle flex-center-spa">
+            <view>推荐标签</view>
+            <view bindtap="goAllTag" class="flex-center">
+                <view>more</view>
+                <image class="more" src="../../resource/images/index/jiantou.png"></image>
+            </view>
+        </view>
+        <view class="tagBox flex-center">
+            <view class="notag" wx:if="{{tags.length==0}}">暂无推荐标签</view>
+            <view bindtap="tagUnderList" class="tagItem rel" data-tagid="{{item.tab_id}}" data-tagtext="{{item.name}}" wx:for="{{tags}}">
+                <image class="tagImg" src="{{item.logo}}"></image>
+                <view class="tagBorder ab">
+                    <view class="tagName">#{{item.name}}#</view>
+                </view>
+            </view>
+        </view>
+    </view> -->
+    <view class='icon-resource-content'>
+      <scroll-view scroll-x="{{true}}">
+        <view class='icon-txx' wx:if="{{allTabs.length>0}}">
+          <view class='icon-sx' bindtap="tranAllTabs" data-tagid="" data-tagtext="">
+            <image class='icon_j' src='../../resource/images/icon_j.png'></image>
+            <text>全部</text>
+          </view>
+          <view class='icon-sx' bindtap="tranAllTabs" wx:for="{{allTabs}}" data-tagid="{{item.tab_id}}" data-tagtext="{{item.name}}">
+            <image class='icon_j' src='../../resource/images/icon_j.png'></image>
+            <text>{{item.name}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='user-share-content'>
+      <view class='user-cou-left'>
+        <view class='share-list' bindtap='goDetails' wx:for="{{foundList}}" wx:if="{{item.heart_id&&index%2==0}}" data-tipid="{{item.heart_id}}" wx:key="{{index}}">
+          <image mode="widthFix" class='img-content' src='{{item.image[item.image.length -1]}}'></image>
+          <view class='share-content'>{{item.title}}</view>
+          <view class='heam'>
+            <view catchtap='goHisHome' data-userid='{{item.user_id}}' class='name'>
+              <image src='{{item.avatar}}'></image>
+              <view>{{item.nickname}}</view>
+            </view>
+            <view class='share'>
+              <image src='../../resource/images/icon_heat.png'></image>
+              <view>{{item.favour}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='user-cou-right'>
+        <view class='share-list' bindtap='goDetails' wx:for="{{foundList}}" wx:if="{{item.heart_id&&index%2!=0}}" data-tipid="{{item.heart_id}}" wx:key="{{index}}">
+          <image mode="widthFix" class='img-content' src='{{item.image[item.image.length -1]}}'></image>
+          <view class='share-content'>{{item.title}}</view>
+          <view class='heam'>
+            <view catchtap='goHisHome' data-userid='{{item.user_id}}' class='name'>
+              <image src='{{item.avatar}}'></image>
+              <view>{{item.nickname}}</view>
+            </view>
+            <view class='share'>
+              <image src='../../resource/images/icon_heat.png'></image>
+              <view>{{item.favour}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      
+    </view>
+    
+    <!-- <view class="ans">
+        <view class="ansTitle flex-center-spa">
+            <view class="push">推荐一些优质答主给你</view>
+            <view bindtap="gorecomAnser" class="flex-center">
+                <view class="flex-center">
+                    <image class="header" data-user_id="{{item.user_id}}" src="{{item.avatar}}" wx:for="{{recommAnsers}}"></image>
+                </view>
+                <image class="arrow" src="../../resource/images/index/jiantou.png"></image>
+            </view>
+        </view>
+        <view bindtap="seleDetails" class="ansItem" data-contentid="{{item.content_id}}" wx:for="{{selectRecomms}}">
+            <view class="imgBox rel">
+                <image class="ansImg" src="{{item.image}}"></image>
+                <view class="ansTag ab">精选推荐</view>
+            </view>
+            <view class="ansName dot">{{item.title}}</view>
+            <view class="heng"></view>
+            <view class="author">——来自：{{item.from}}</view>
+        </view>
+    </view> -->
+    <!-- <view class="zhichi" wx:if="{{ptInfo.is_show_tech==1}}">
+        <view class="logob_box">
+            <image class="logo_b" src="{{ptInfo.tech_img}}"></image>
+        </view>
+        <view class="center_word">
+            <view class="logo_name">{{ptInfo.tech_title}}</view>
+            <view>合作电话:{{ptInfo.tech_phone}}</view>
+        </view>
+        <view bindtap="callTap" class="callphone" data-tel="{{ptInfo.tech_phone}}">拨打</view>
+    </view> -->
+</view>
+<view bindtap="close" class="drawer_screen" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="showBox" wx:if="{{showModalStatus}}">
+    <view class="jianbian border_b flex-center-col">
+        <image class="linearImg ab" src="../../resource/images/index/tcbj.png"></image>
+        <view class="everyday rel">每日一签</view>
+        <view class="signFor rel">签到兑换优惠券</view>
+        <view class="hx rel"></view>
+        <view class="jifen flex-end rel">
+            <view class="jia">+</view>
+            <view class="num">{{signInfo.signed_integral}}</view>
+            <view>积分</view>
+        </view>
+        <view class="qianwen rel">今日签文：{{signInfo.signed_text}}</view>
+    </view>
+    <view class="signText flex-center-spa">
+        <view>您已签到成功</view>
+        <view>签到天数 {{signInfo.signed_day}}</view>
+    </view>
+    <view class="signText flex-center-spa">
+        <view>您已获得{{signInfo.sign_points}}积分</view>
+        <view>累计积分 {{signInfo.sign_points}}</view>
+    </view>
+    <view bindtap="close" class="backIndex center" data-statu="close">返回首页</view>
+</view>
+<!-- <login bindwatch="updateUserInfo" login="true"></login> -->
+<!-- <view class="footerWrap" wx:if="{{ptInfo.showcheck==0}}">
+    <footer chooseNav="0"></footer>
+</view> -->

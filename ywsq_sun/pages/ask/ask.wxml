@@ -1,0 +1,38 @@
+
+<view class="formBox">
+    <form bindsubmit="bindRelease" reportSubmit="true">
+    <input class='add-title' name="asktitle" value="{{asktitle}}" placeholder-style='color:#999999;font-size:26rpx;' 
+     placeholder='加个标题会有更多点赞哦~'></input>
+    <textarea class='say-somethening' name="askdesc" value="{{askdesc}}" placeholder-style='color:#999999;font-size:26rpx;' 
+     placeholder='说些什么吧'></textarea>
+    <view catchtap="selTagTap" class='topic'>
+      <view class='topic-title'>
+        <image class='topic-icon' src='../../resource/images/icon_j.png'></image>
+        <view class='to-pic'>参与话题</view>
+      </view>
+      <image class='to-arraw' src='../../resource/images/go-to-select-active.png'></image>
+    </view>
+
+    <view class='add-file'>
+      <view class='add-title-img'>添加图片</view>
+      <view class='add-file-content'>
+        <view class='file-img' bindtap="chooseImage">
+          <image mode="aspectFill" class='draft-img' src='../../resource/images/add-file-img.png'></image>
+        </view>
+        <view class='file-img' data-index="{{index}}" data-list="{{pics}}" wx:for="{{pics}}" wx:key="*this">
+          <image class='close-img' catchtap="deleteImage" data-index="{{index}}" src='../../resource/images/close-img.png'></image>
+          <image mode="aspectFill" class='draft-img' src='{{item}}'></image>
+        </view>
+      </view>
+    </view>
+    <view class='add-storage'>
+      <view class='stor-notes'>
+        <view class='draft'>
+          <image class='icon' src='../../resource/images/draft.png'></image>
+          <view class='text'>存草稿</view>
+        </view>
+        <button form-type='submit' class='post-notes'>发布笔记</button>
+      </view>
+    </view>
+  </form>
+</view>

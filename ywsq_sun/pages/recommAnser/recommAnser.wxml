@@ -1,0 +1,10 @@
+<view class="no" wx:if="{{answerList.length==0}}">暂无推荐答主</view>
+<view bindtap="goHisHome" class="anserItem border_b" data-userid="{{item.user_id}}" wx:for="{{answerList}}">
+    <view class="writerMes flex-center rel">
+        <image class="header" src="{{item.avatar}}"></image>
+        <view class="flex-center flex1">
+            <view class="nickName flex1">{{item.nickname}}</view>
+        </view>
+        <view catchtap="focusTap" class="focus {{item.isFollow==1?'active':''}}" data-index="{{index}}" data-statu="open" data-userid="{{item.user_id}}" wx:if="{{users.user_id!=item.user_id}}">{{item.isFollow==1?'已关注':'关注'}}</view>
+    </view>
+</view>

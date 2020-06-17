@@ -1,0 +1,24 @@
+<view class="bigWrap">
+    <view class="headerRow flex-center-spa border_b">
+        <view>头像</view>
+        <view class="flex-center">
+            <image class="header" src="{{userInfo.avatar}}"></image>
+            <image class="arrow" src="../../resource/images/index/jiantou.png"></image>
+        </view>
+    </view>
+    <view class="row flex-center-spa border_b">
+        <view>昵称</view>
+        <view class="flex-center">
+            <input disabled class="input" maxlength="14" value="{{userInfo.nickname}}"></input>
+            <image class="arrow" src="../../resource/images/index/jiantou.png"></image>
+        </view>
+    </view>
+    <view class="row flex-center-spa">
+        <view class="">个性签名</view>
+        <view class="flex-center">
+            <input bindconfirm="sendComment" class="input" confirmType="send" maxlength="14" value="{{userInfo.autograph}}" wx:if="{{userInfo.autograph}}"></input>
+            <input bindconfirm="sendComment" class="input" confirmType="send" maxlength="14" placeholder="赶紧添加个性签名吧" value="" wx:if="{{!userInfo.autograph}}"></input>
+            <image class="arrow" src="../../resource/images/index/jiantou.png"></image>
+        </view>
+    </view>
+</view>

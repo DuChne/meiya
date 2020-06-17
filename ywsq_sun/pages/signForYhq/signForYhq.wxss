@@ -1,0 +1,111 @@
+.topBox {
+    height: 392rpx;
+}
+
+.bj {
+    width: 100%;
+    height: 392rpx;
+}
+
+.yhqBox {
+    width: 672rpx;
+    height: 438rpx;
+    top: 62rpx;
+    left: 38rpx;
+}
+
+.yhqbj {
+    width: 100%;
+    height: 438rpx;
+}
+
+.yhqList {
+    margin: 76rpx 0 0 0;
+}
+
+.yhqItem {
+    width: 50%;
+    color: #bfb797;
+}
+
+.yhqItem:nth-child(2) {
+    border-left: 1rpx solid #999;
+}
+
+.yhqNum {
+    font-size: 80rpx;
+    line-height: 80rpx;
+}
+
+.yhqItem.active {
+    color: #FA6000;
+}
+
+.type {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.exchange {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.getBtn {
+    width: 450rpx;
+    height: 84rpx;
+    background: rgba(248,103,56,1);
+    text-align: center;
+    line-height: 84rpx;
+    color: #fff;
+    font-size: 36rpx;
+    margin: 60rpx auto 0;
+}
+
+.mineJifen {
+    color: #F86738;
+    text-align: center;
+    line-height: 30rpx;
+    margin: 24rpx 0 0;
+}
+
+.ruleWrap {
+    margin: 178rpx 0 0;
+}
+
+.title {
+    font-size: 26rpx;
+    color: #666;
+    text-align: center;
+}
+
+.ruleBox {
+    padding: 30rpx 46rpx;
+}
+
+.ruleText {
+    width: 100%;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.topBj {
+    width: 256rpx;
+    height: 70rpx;
+    text-align: center;
+    line-height: 55rpx;
+    left: 212rpx;
+    margin: -10rpx auto 0;
+    z-index: 1;
+}
+
+.getYhq {
+    width: 256rpx;
+    height: 70rpx;
+    left: 0;
+    top: 0;
+}
+
+.get {
+    color: #fff;
+}

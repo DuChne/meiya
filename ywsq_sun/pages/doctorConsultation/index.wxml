@@ -1,0 +1,64 @@
+<image class='doctor-consultation-banner' src='../../resource/images/doctor-consultation-banner.png'></image>
+<!-- <view class='recording-content'> -->
+  <!-- <view class='recording-list'>
+    <image class='reco-icon' src='../../resource/images/recording.png'></image>
+    <view class='reco-text'>
+      <view class='reco-title'>问题暂存</view>
+      <view class='reco-subtitle'>编辑未提交问题</view>
+    </view>
+  </view> -->
+  <!-- record-right -->
+  <!-- <view bindtap='goRecord' class='recording-list'>
+    <image class='reco-icon' src='../../resource/images/recording.png'></image>
+    <view class='reco-text'>
+      <view class='reco-title'>咨询记录</view>
+      <view class='reco-subtitle'>查看咨询明细</view>
+    </view>
+  </view> -->
+<!-- </view> -->
+
+<view class='good-doctor'>
+  <view class='title'>优选好医生</view>
+  <view class='platform'>平台认证 急速响应</view>
+</view>
+
+<view class='doctor-content' wx:for="{{doctorList}}">
+  <view class='user-left'>
+    <image class='user-head' src='{{item.avatarUrl}}'></image>
+    <view class='score'>{{item.star}}分</view>
+  </view>
+  <view class='user-right'>
+    <view class='name'>{{item.name_cn}}</view>
+    <view class='subject'>
+      <view class='ys'>{{item.positionName}}</view>
+      <view class='sub'>{{item.subject}}</view>
+    </view>
+    <view class='label-d'>
+      <view class='label'>{{item.hospital_subject}}</view>
+      <view class='text-label'>{{item.hospital_name}}</view>
+    </view>
+    <view class='label-details'>{{item.intro}}</view>
+    <view class='help-man'>已帮助：{{item.doctor_pid_cnt}}人</view>
+    <navigator url='../doctorAnswer/index?userid={{item.user_id}}&doctor_id={{item.doctor_id}}&name={{item.name_cn}}&positionName={{item.positionName}}' class='new-contact'>立即咨询</navigator>
+  </view>
+</view>
+<!-- <view class='doctor-content'>
+  <view class='user-left'>
+    <image class='user-head' src='../../resource/images/recording.png'></image>
+    <view class='score'>4.5分</view>
+  </view>
+  <view class='user-right'>
+    <view class='name'>林雪</view>
+    <view class='subject'>
+      <view class='ys'>主治医生</view>
+      <view class='sub'>牙科</view>
+    </view>
+    <view class='label-d'>
+      <view class='label'>口腔医院</view>
+      <view class='text-label'>美莱口腔整形</view>
+    </view>
+    <view class='label-details'>擅长：牙齿矫正，医疗整形，洗牙植牙.....</view>
+    <view class='help-man'>已帮助：6000人</view>
+    <navigator url='../doctorAnswer/index' class='new-contact'>立即咨询</navigator>
+  </view>
+</view> -->

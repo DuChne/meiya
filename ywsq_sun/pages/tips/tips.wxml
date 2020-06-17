@@ -1,0 +1,70 @@
+<!-- <view class="wall"></view>
+<form bindsubmit="publish" reportSubmit="true">
+    <view class="bigWrap">
+        <view bindtap="chooseImage" class="addImg flex-center-cen">
+            <image class="camera" src="../../resource/images/index/xinde.png"></image>
+            <view class="addText">添加照片/视频(必选)</view>
+        </view>
+        <view class="upload flex">
+            <view bindtap="previewImage" class="content_add rel" data-index="{{index}}" data-list="{{pics}}" wx:for="{{pics}}" wx:key="*this">
+                <view catchtap="deleteImage" class="deleteImage ab" data-index="{{index}}">
+                    <image class="closeIcon ab" mode="widthFix" src="../../resource/images/index/close.png"></image>
+                </view>
+                <image class="add_img" mode="aspectFill" src="{{item}}"></image>
+            </view>
+        </view>
+        <view class="title">我的推荐</view>
+        <input class="input border_b" name="title" placeholder="请输入标题(必填)" placeholderClass="diyHolder"></input>
+        <view class="title">推荐理由</view>
+        <textarea bindinput="bindInput" class="textArea border_b" maxlength="-1" name="reason" placeholder="请输入推荐理由(必填)" placeholderClass="diyHolder"></textarea>
+        <view class="title">去哪儿找</view>
+        <input class="input" name="buypath" placeholder="请输入购买详情(必填)" placeholderClass="diyHolder"></input>
+        <view class="tag flex-center border_t">
+            <view catchtap="selTagTap" class="claTag center" hidden="{{tagText.length==3}}">选择标签(必选)</view>
+            <view class="rel" wx:for="{{tagText}}">
+                <view class="claTag center">{{item}}</view>
+                <view catchtap="deleteTap" class="close ab" data-index="{{index}}">x</view>
+            </view>
+        </view>
+        <button class="release center" formType="submit">发布</button>
+    </view>
+</form> -->
+<view class="formBox">
+    <form bindsubmit="publish" reportSubmit="true">
+    <input class='add-title' name="title" placeholder-style='color:#999999;font-size:26rpx;' 
+     placeholder='加个标题会有更多点赞哦~'></input>
+    <textarea class='say-somethening' bindinput="bindInput" name="reason" placeholder-style='color:#999999;font-size:26rpx;' 
+     placeholder='说些什么吧'></textarea>
+    <view catchtap="selTagTap" class='topic'>
+      <view class='topic-title'>
+        <image class='topic-icon' src='../../resource/images/icon_j.png'></image>
+        <view wx:if="{{tagText.length==0}}" class='to-pic'>参与话题</view>
+        <view wx:if="{{tagText.length>0}}" style="margin-right:10rpx" wx:for="{{tagText}}">{{item}}</view>
+      </view>
+      <image class='to-arraw' src='../../resource/images/go-to-select-active.png'></image>
+    </view>
+
+    <view class='add-file'>
+      <view class='add-title-img'>添加图片</view>
+      <view class='add-file-content'>
+        <view class='file-img' bindtap="chooseImage">
+          <image mode="aspectFill" class='draft-img' src='../../resource/images/add-file-img.png'></image>
+        </view>
+        <view class='file-img' data-index="{{index}}" data-list="{{pics}}" wx:for="{{pics}}" wx:key="*this">
+          <image class='close-img' catchtap="deleteImage" data-index="{{index}}" src='../../resource/images/close-img.png'></image>
+          <image mode="aspectFill" class='draft-img' src='{{item}}'></image>
+        </view>
+      </view>
+    </view>
+    <view class='add-storage'>
+      <view class='stor-notes'>
+        <!-- <view class='draft'>
+          <image class='icon' src='../../resource/images/draft.png'></image>
+          <view class='text'>存草稿</view>
+        </view> -->
+        <button form-type='submit' class='post-notes'>发布笔记</button>
+      </view>
+    </view>
+  </form>
+</view>
+

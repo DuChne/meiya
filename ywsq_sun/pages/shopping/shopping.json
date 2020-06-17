@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "购物",
+    "usingComponents": {
+        "footer": "/ywsq_sun/pages/SecFooter/SecFooter",
+                "login": "/ywsq_sun/pages/modal/login"
+    }
+}

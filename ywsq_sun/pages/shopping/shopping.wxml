@@ -1,0 +1,47 @@
+<view class='shopping-banner'>
+  <swiper indicator-dots="{{true}}">
+    <block wx:for="{{shopContentImg}}">
+      <swiper-item>
+        <image src="{{item.image}}" class="slide-image" width="690" height="264"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='coupon-banner'>
+  <image src='../../resource/images/coupon.png'></image>
+</view>
+<view class='hot-recommend'>
+  <image class='icon' src='../../resource/images/hot.png'></image>
+  优选推荐
+</view>
+<!-- <view class="wall"></view> -->
+<view>
+    <!-- <scroll-view class="scrollView" scrollX="true">
+        <view class="scrollBox">
+            <view class="type-navbar border_b flex-center">
+                <view class="type-box">
+                    <view bindtap="tabClick" class="type-navbar-item {{currentType==0?'type-item-on':''}}" data-index="0">全部</view>
+                </view>
+                <view class="type-box" style="margin-left:72rpx;" wx:for="{{carDatas}}" wx:key="id">
+                    <view bindtap="tabClick" class="type-navbar-item {{currentType==index+1?'type-item-on':''}}" data-id="{{item.id}}" data-index="{{index+1}}">{{item}}</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view> -->
+    <view class="list flex-center-spa">
+        <view bindtap="navigateToGoods" class="item" data-goods-id="{{goods.goods_id}}" wx:for="{{goodsList}}" wx:for-item="goods">
+            <image class="img flex" src="{{goods.original_img}}"></image>
+            <view class="name dot">{{goods.goods_name}}</view>
+            <view class="price">
+                <view class="cur"><text>券后价: ¥</text>{{goods.shop_price}}</view>
+                <!-- <view class="ori">¥{{goods.market_price}}</view> -->
+                <view class="ori">已售：17833件</view>
+            </view>
+            <!-- <view class="buy">立即购买</view> -->
+        </view>
+    </view>
+</view>
+<!-- <view class="footerWrap">
+    <footer chooseNav="2"></footer>
+</view> -->
+<login bindwatch="updateUserInfo" login="true"></login>

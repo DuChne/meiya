@@ -1,0 +1,15 @@
+<!--ywsq_sun/pages/doctorAnswer/index.wxml-->
+<view class='doctor-answer'>
+  <view class='time'></view>
+  <view wx:for="{{doctorList.chatlist}}" class='{{item.who ==0?"answer-left":"answer-right"}}'>
+    <image class='head' wx:if="{{item.who ==0}}" src='{{doctorList.doctor_avatar}}'></image>
+    <view class='content'>{{item.content}}</view>
+    <image class='head' wx:if="{{item.who ==1}}" src='{{doctorList.patient_avatar}}'></image>
+  </view>
+</view>
+<view class='send-message'>
+  <view class='position'>
+    <input class='send-inp' value='{{userMessage}}' bindinput='sendInp' placeholder-style='font-size:24rpx;' placeholder='在这里输入聊天内容'></input>
+    <view bindtap='postMessage' class='send-button'>发送</view>
+  </view>
+</view>

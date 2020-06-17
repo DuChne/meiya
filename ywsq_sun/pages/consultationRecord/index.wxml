@@ -1,0 +1,30 @@
+<!--ywsq_sun/pages/consultationRecord/index.wxml-->
+<view class='consultation-record' bindtap='goRecordDetails'>
+  <view class='record-time'>
+    <view class='title'>咨询时间</view>
+    <view class='details'>2019-7-26 11:35:29</view>
+  </view>
+  <view class='record-time'>
+    <view class='title'>咨询人</view>
+    <view class='details'>王潇潇</view>
+  </view>
+  <view class='record-time'>
+    <view class='title'>咨询描述</view>
+    <view class='details'>牙齿不整齐，有点黑怎么办？</view>
+  </view>
+</view>
+<view class='consultation-record' bindtap='goRecordDetails'>
+  <view class='record-time'>
+    <view class='title'>咨询时间</view>
+    <view class='details'>2019-7-26 11:35:29</view>
+  </view>
+  <view class='record-time'>
+    <view class='title'>咨询人</view>
+    <view class='details'>王潇潇</view>
+  </view>
+  <view class='record-time'>
+    <view class='title'>咨询描述</view>
+    <view class='details'>牙齿不整齐，有点黑怎么办？</view>
+  </view>
+</view>
+<view class='no-more-history'>没有更多记录</view>

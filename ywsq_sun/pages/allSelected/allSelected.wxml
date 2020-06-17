@@ -1,0 +1,9 @@
+<view class="wall"></view>
+<view class="bigWrap">
+    <view class="title">全部精选</view>
+    <view bindtap="seleDetails" class="row flex-center border_t" data-contentid="{{item.content_id}}" wx:for="{{allSelected}}">
+        <image class="img" src="{{item.image}}"></image>
+        <view class="text flex1 dot">{{item.title}}</view>
+        <image class="arrow" src="../../resource/images/index/jiantou-2.png"></image>
+    </view>
+</view>

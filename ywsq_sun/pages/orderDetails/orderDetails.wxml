@@ -1,0 +1,60 @@
+<view class="big_box">
+    <view class="order_box">
+        <view class="order_title flex-center border_b border_t">
+            <view>订单编号：</view>
+            <view>{{order.order_sn}}</view>
+        </view>
+        <view>
+            <view bindtap="godetail" class="buyMesBox flex" data-order-id="{{item.order_id}}" wx:for="{{order.goods_list}}" wx:for-item="goods">
+                <image class="goodsImg" src="{{goods.original_img}}"></image>
+                <view class="flex1">
+                    <view class="goodsName dot">{{goods.goods_name}}</view>
+                    <view class="guige flex-center-spa">
+                        <view>{{goods.sku_name}}</view>
+                        <view class="singleP">¥{{goods.goods_price}}</view>
+                    </view>
+                    <view class="num">X{{goods.goods_num}}</view>
+                    <view class="totalP">合计：¥{{goods.total_price}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="coupons" wx:if="{{order.coupon_list_id}}">优惠券 ￥{{order.coupon_price}}</view>
+        <view class="order_guige border_t flex-center-spa">
+            <view>实付金额</view>
+            <view class="price">¥{{order.order_amount}}</view>
+        </view>
+    </view>
+    <view class="buyer_box border_b">
+        <view class="order_title flex-center">
+            <view>收货信息</view>
+        </view>
+        <view class="connect_box border_t">
+            <view class="flex-center">
+                <view>姓名：</view>
+                <view>{{order.consignee}}</view>
+            </view>
+            <view class="flex-center">
+                <view>联系电话：</view>
+                <view>{{order.mobile}}</view>
+            </view>
+            <view class="flex">
+                <view>收货地址：</view>
+                <view class="flex1">{{order.province}}{{order.city}}{{order.district}}{{order.address}}</view>
+            </view>
+            <view class="flex" wx:if="{{order.shipping_name}}">
+                <view>快递名称：</view>
+                <view class="flex1">{{order.shipping_name}}</view>
+            </view>
+            <view class="flex" wx:if="{{order.invoice_no}}">
+                <view>快递单号：</view>
+                <text selectable class="flex1">{{order.invoice_no}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="btnRow flex-center">
+        <view bindtap="cancelOrder" class="cancle btn" data-order-id="{{order.order_id}}" wx:if="{{order.cancel_btn==1}}">取消订单</view>
+        <view bindtap="payOrder" class="pay btn" data-order-id="{{order.order_id}}" wx:if="{{order.pay_btn==1}}">立即支付</view>
+        <view bindtap="confirmOrder" class="pay btn" data-order-id="{{order.order_id}}" wx:if="{{order.receive_btn==1}}">确认收货</view>
+        <view bindtap="deleteOrder" class="cancle btn" data-order-id="{{order.order_id}}" wx:if="{{order.order_status==4||order.order_status==3}}">删除订单</view>
+    </view>
+</view>

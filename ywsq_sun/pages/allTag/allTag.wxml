@@ -1,0 +1,31 @@
+<view>
+    <view class="recommTag" wx:if="{{recommTabs.length!=0}}">
+        <view class="tagTitle flex-center-spa">
+            <view>推荐标签</view>
+        </view>
+        <view class="tagBox flex-center">
+            <view bindtap="selTagTap" class="tagItem rel" data-tagid="{{item.tab_id}}" data-tagtext="{{item.name}}" wx:for="{{recommTabs}}">
+                <image class="tagImg" src="{{item.logo}}"></image>
+                <view class="tagBorder ab">
+                    <view class="tagName dot">#{{item.name}}#</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="tagClassic" wx:for="{{allTabs}}">
+        <view class="classicT flex-center-spa">
+            <view>{{item.name}}</view>
+            <!-- <view bindtap="changeToggle" class="flex-center-spa" data-index="{{index}}">
+                <view>{{selectedFlag[index]?'收起':'展开'}}</view>
+                <image class="arrow {{selectedFlag[index]?'down':'upp'}}" src="../../resource/images/index/jiantou.png"></image>
+            </view> -->
+        </view>
+        <view class="classDeta flex-center-spa">
+            <view bindtap="selTagTap" class="classitem center" data-tagid="{{items.tab_id}}" data-tagtext="{{items.name}}" wx:for="{{item.child}}" wx:for-item="items">{{items.name}}</view>
+        </view>
+        <!--  hidden="{{!selectedFlag[index]}}" -->
+        <view class="classDeta flex-center">
+            <view bindtap="selTagTap" class="classitem center" data-tagid="{{itemmore.tab_id}}" data-tagtext="{{itemmore.name}}" wx:for="{{item.child_more}}" wx:for-item="itemmore">{{itemmore.name}}</view>
+        </view>
+    </view>
+</view>

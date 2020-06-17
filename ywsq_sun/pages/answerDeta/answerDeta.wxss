@@ -1,0 +1,191 @@
+.bigWrap {
+}
+
+.main {
+    margin: 20rpx 0;
+    padding: 0 20rpx 40rpx;
+    background-color: #fff;
+}
+
+.nameRow {
+    height: 110rpx;
+}
+
+.header {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 100%;
+}
+
+.nick {
+    margin: 0 30rpx;
+}
+
+.focus {
+    width: 100rpx;
+    height: 40rpx;
+    background: rgba(0,0,0,1);
+    border-radius: 20rpx;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 40rpx;
+    right: 20rpx;
+}
+
+.focus.active {
+    background-color: #999;
+    padding: 0 5rpx;
+}
+
+.tag {
+    color: #0a1d53;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    margin: 20rpx 0 0;
+}
+
+.title {
+    line-height: 30rpx;
+    margin: 30rpx 0;
+}
+
+.contents {
+    font-size: 26rpx;
+    color: #999;
+    display: inline-block;
+    margin: 0 0 20rpx;
+}
+
+.ansimg {
+    width: 100%;
+}
+
+.others {
+    padding: 20rpx 34rpx 30rpx 20rpx;
+    background-color: #fff;
+    margin: 0 0 20rpx 0;
+}
+
+.noTips {
+    margin: 30rpx 0 0;
+    font-size: 26rpx;
+    color: #666;
+}
+
+.otherTips {
+    font-size: 26rpx;
+    color: #999;
+    line-height: 26rpx;
+}
+
+.item {
+    margin: 30rpx 0 0;
+}
+
+.others>view:nth-child(2) {
+    margin: 20rpx 0 0;
+}
+
+.img {
+    width: 200rpx;
+    height: 134rpx;
+    margin: 0 30rpx 0 0;
+}
+
+.ansTitle {
+    font-size: 26rpx;
+}
+
+.ansCon {
+    font-size: 26rpx;
+    color: #999;
+    margin: 10rpx 0 0;
+}
+
+.moreBtn {
+    width: 450rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 60rpx auto 0;
+    border: 1rpx solid #000;
+}
+
+.commentsList {
+    margin: 0 0 20rpx 0;
+    background-color: #fff;
+}
+
+.commItem {
+    padding: 20rpx 30rpx;
+}
+
+.header {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 100%;
+    display: flex;
+}
+
+.nick {
+    font-size: 28rpx;
+    margin: 0 20rpx;
+}
+
+.commTime {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.comcontents {
+    font-size: 26rpx;
+    color: #666;
+    margin: 10rpx 0 0 90rpx;
+}
+
+.moreComm {
+    color: #666;
+    text-align: center;
+    background-color: #fff;
+    font-size: 26rpx;
+    padding: 20rpx 0;
+}
+
+.box {
+    height: 110rpx;
+}
+
+.comment {
+    width: 100%;
+    height: 110rpx;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+}
+
+.commentBox {
+    width: 450rpx;
+    height: 70rpx;
+    margin: 0 84rpx 0 20rpx;
+    background: rgba(242,242,242,1);
+}
+
+.input {
+    height: 100%;
+    margin: 0 20rpx;
+}
+
+.icon {
+    width: 45rpx;
+    height: 40rpx;
+}
+
+.zanBox {
+    margin: 0 0 0 20rpx;
+}
+
+.zanNum {
+    margin: -20rpx -20rpx 0 0;
+    font-size: 24rpx;
+    color: #999;
+}

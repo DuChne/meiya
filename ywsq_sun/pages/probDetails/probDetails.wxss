@@ -1,0 +1,151 @@
+.ques {
+    background-color: #fff;
+    margin: 20rpx 0 0;
+}
+
+.nameRow {
+    padding: 20rpx;
+}
+
+.title {
+    padding: 0 20rpx;
+    line-height: 30rpx;
+}
+
+.img {
+    width: 100%;
+}
+
+.desc {
+    font-size: 26rpx;
+    color: #666;
+    margin: 27rpx 20rpx 30rpx;
+}
+
+.tag {
+    color: #0a1d53;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    padding: 0 20rpx 24rpx;
+}
+
+.header {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 100%;
+}
+
+.nick {
+    margin: 0 30rpx;
+}
+
+.star {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.ansBox {
+    height: 146rpx;
+    box-sizing: border-box;
+}
+
+.meAns {
+    width: 450rpx;
+    height: 84rpx;
+    line-height: 84rpx;
+    text-align: center;
+    border: 1rpx solid #000;
+    font-size: 32rpx;
+}
+
+.noAnswer {
+    padding: 20rpx;
+}
+
+.ansTitle {
+    height: 64rpx;
+}
+
+.role {
+    width: 170rpx;
+    height: 1rpx;
+    border-bottom: 1rpx solid rgba(153,153,153,1);
+    box-sizing: border-box;
+}
+
+.ansText {
+    font-size: 24rpx;
+    color: #999;
+    margin: 0 26rpx;
+}
+
+.ansItem {
+    background-color: #fff;
+    padding: 0 0 20rpx 0;
+    margin: 0 0 20rpx 0;
+}
+
+.focus {
+    width: 100rpx;
+    height: 40rpx;
+    background: rgba(0,0,0,1);
+    border-radius: 20rpx;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 40rpx;
+    right: 20rpx;
+}
+
+.focued {
+    width: 100rpx;
+    height: 40rpx;
+    border-radius: 20rpx;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 40rpx;
+    right: 20rpx;
+    background-color: #999;
+}
+
+.ansCont {
+    padding: 0 34rpx 0 20rpx;
+}
+
+.conTitle {
+}
+
+.con {
+    font-size: 26rpx;
+    color: #999;
+    margin: 10rpx 0 0 0;
+}
+
+.ansImg {
+    width: 200rpx;
+    height: 180rpx;
+    margin: 0 30rpx 0 0;
+    display: block;
+}
+
+.rightBox {
+}
+
+.icon {
+    width: 45rpx;
+    height: 40rpx;
+    margin: 0 0 0 50rpx;
+}
+
+.iconRow {
+    display: flex;
+    justify-content: flex-end;
+    padding: 26rpx 40rpx 0 20rpx;
+}
+
+.zanNum {
+    margin: -20rpx -20rpx 0 0;
+    font-size: 24rpx;
+    color: #999;
+}

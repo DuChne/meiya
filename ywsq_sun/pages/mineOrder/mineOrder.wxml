@@ -1,0 +1,41 @@
+<view class="wall"></view>
+<view>
+    <view class="status_box flex-center-spa border_b">
+        <view bindtap="tabClick" class="status_label {{currentStatus==0?'active':''}}" data-index="0">全部订单</view>
+        <view bindtap="tabClick" class="status_label {{currentStatus==1?'active':''}}" data-index="1">待付款</view>
+        <view bindtap="tabClick" class="status_label {{currentStatus==2?'active':''}}" data-index="2">进行中</view>
+        <view bindtap="tabClick" class="status_label {{currentStatus==3?'active':''}}" data-index="3">已完成</view>
+    </view>
+    <view class="orderList">
+        <view class="item" wx:for="{{orderList}}">
+            <view class="title">
+                <view class="status">{{item.order_status_desc}}</view>
+            </view>
+            <view bindtap="godetail" class="buyMesBox flex" data-order-id="{{item.order_id}}" wx:for="{{item.goods_list}}" wx:for-item="goods">
+                <image class="goodsImg" src="{{goods.original_img}}"></image>
+                <view class="flex1">
+                    <view class="goodsName dot">{{goods.goods_name}}</view>
+                    <view class="guige flex-center-spa">
+                        <view>{{goods.sku_name}}</view>
+                        <view class="singleP">¥{{goods.goods_price}}</view>
+                    </view>
+                    <view class="num">X{{goods.goods_num}}</view>
+                    <view class="totalP">合计：¥{{goods.total_price}}</view>
+                </view>
+            </view>
+            <view class="coupons border_b" wx:if="{{item.coupon_list_id}}">优惠券 ￥{{item.coupon_price}}</view>
+            <view class="order_guige border_b flex-center-spa">
+                <view>实付金额</view>
+                <view class="price">¥{{item.order_amount}}</view>
+            </view>
+            <view class="btnRow flex-center" hidden="{{item.order.isButtonHidden}}">
+                <view bindtap="cancelOrder" class="cancle btn" data-order-id="{{item.order_id}}" wx:if="{{item.cancel_btn==1}}">取消订单</view>
+                <view bindtap="payOrder" class="pay btn" data-order-id="{{item.order_id}}" wx:if="{{item.pay_btn==1}}">立即支付</view>
+                <view bindtap="logistics" class="pay btn" data-order-id="{{item.order_id}}" wx:if="{{item.shipping_btn==1}}">查看物流</view>
+                <view bindtap="confirmOrder" class="pay btn" data-order-id="{{item.order_id}}" wx:if="{{item.receive_btn==1}}">确认收货</view>
+                <view bindtap="deleteOrder" class="cancle btn" data-order-id="{{item.order_id}}" wx:if="{{item.order_status==4||item.order_status==3}}">删除订单</view>
+            </view>
+        </view>
+    </view>
+</view>
+<login bindwatch="updateUserInfo" login="true"></login>

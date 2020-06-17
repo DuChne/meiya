@@ -1,0 +1,150 @@
+.wall {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+}
+
+.scrollView {
+    width: 100%;
+    height: 90rpx;
+    background-color: #fff;
+    white-space: nowrap;
+    border-top: 1rpx solid #eee;
+    border-bottom: 1rpx solid #eee;
+    position: fixed;
+    top: 20rpx;
+}
+
+.scrollBox {
+    min-width: 100%;
+    display: inline-block;
+    padding: 0 20rpx;
+}
+
+.type-navbar {
+    height: 90rpx;
+}
+
+.type-box {
+    line-height: 84rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.type-navbar-item {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30rpx;
+    box-sizing: border-box;
+}
+
+.type-navbar-item.type-item-on {
+    border-bottom: 6rpx solid #000;
+    box-sizing: border-box;
+}
+
+.list {
+    padding: 30rpx 30rpx 0;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.item {
+    width: 337rpx;
+    /* height: 560rpx; */
+    /* border: 1rpx solid #dedbdb; */
+    box-shadow: 0 0 3rpx 0 #dedbdb;
+    box-sizing: border-box;
+    margin: 0 0 20rpx;
+}
+
+.img {
+    width: 335rpx;
+    height: 335rpx;
+    border: 1rpx dashed#dedbdb;
+}
+
+.name {
+    font-size: 26rpx;
+    line-height: 1.2em;
+    margin: 18rpx 12rpx 16rpx;
+    height: 64rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.price {
+    line-height: 30rpx;
+    height: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 18rpx;
+    padding-bottom: 20rpx;
+}
+
+.cur {
+    color: #F95171;
+    font-size: 30rpx;
+}
+.cur text{
+  font-size: 20rpx;
+}
+.ori {
+    font-size: 18rpx;
+    color: #AFAFAF;
+}
+
+.buy {
+    font-size: 32rpx;
+    color: #fff;
+    width: 250rpx;
+    height: 65rpx;
+    background: rgba(248,103,56,1);
+    text-align: center;
+    line-height: 65rpx;
+    margin: 27rpx auto 40rpx;
+}
+.shopping-banner{
+  width: 690rpx;
+  height: 264rpx;
+  margin: 0 auto;
+}
+.shopping-banner swiper{
+  width: 100%;
+  height: 100%;
+}
+.shopping-banner swiper image{
+  width: 100%;
+  height: 100%;
+}
+.coupon-banner{
+  width: 690rpx;
+  height: 171rpx;
+  margin: 0 auto;
+  padding-top: 23rpx;
+}
+.coupon-banner image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hot-recommend{
+  display: flex;
+  width: 690rpx;
+  margin: 0 auto;
+  align-items: center;
+  height: 36rpx;
+  font-size: 25rpx;
+  color: #000000;
+  margin-top: 18rpx;
+}
+.hot-recommend .icon{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+}

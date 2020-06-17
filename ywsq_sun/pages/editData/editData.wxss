@@ -1,0 +1,32 @@
+.bigWrap {
+    padding: 0 0 70rpx 20rpx;
+    background-color: #fff;
+    margin: 20rpx 0 0 0;
+}
+
+.headerRow {
+    height: 140rpx;
+    padding: 0 20rpx 0 0;
+    color: #333;
+}
+
+.header {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.row {
+    height: 70rpx;
+    padding: 0 20rpx 0 0;
+    color: #333;
+}
+
+.input {
+    text-align: right;
+}
+
+.arrow {
+    width: 10rpx;
+    height: 20rpx;
+    margin: 0 0 0 20rpx;
+}

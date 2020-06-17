@@ -1,0 +1,70 @@
+page {
+    background-color: #fff;
+}
+
+.writerMes {
+    padding: 0 20rpx;
+    height: 120rpx;
+}
+
+.header {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 100%;
+}
+
+.focus {
+    width: 100rpx;
+    height: 40rpx;
+    background: rgba(255,255,255,1);
+    border-radius: 20rpx;
+    font-size: 30rpx;
+    color: #000;
+    text-align: center;
+    line-height: 40rpx;
+    right: 20rpx;
+    border: 1rpx solid #000;
+}
+
+.nickName {
+    color: #000;
+    margin: 0 20rpx 0 30rpx;
+}
+
+.tips {
+    font-size: 26rpx;
+    color: #999;
+    margin: 0 20rpx 0 0;
+}
+
+.fsIcon {
+    display: block;
+    width: 170rpx;
+    height: 170rpx;
+    margin: 80rpx auto 40rpx;
+}
+
+.succText {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.back {
+    width: 450rpx;
+    height: 80rpx;
+    border: 1rpx solid #000;
+    font-size: 32rpx;
+    line-height: 80rpx;
+    margin: 37rpx auto 0;
+}
+
+.showBox {
+    position: fixed;
+    top: 325rpx;
+    left: 55rpx;
+    width: 640rpx;
+    height: 480rpx;
+    background: rgba(255,255,255,1);
+    border-radius: 10rpx;
+    z-index: 11;
+}

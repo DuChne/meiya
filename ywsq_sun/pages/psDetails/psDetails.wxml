@@ -1,0 +1,16 @@
+<view>
+    <image class="detailsImg" src="http://oydmq0ond.bkt.clouddn.com/sucai-6.jpg"></image>
+    <view class="stepBox">
+        <view class="name">复古彩色润唇口红</view>
+        <view class="liulan">101人浏览</view>
+        <view class="intro">
+            <text>她不是你的亮点，只是你美的装点，更是开启多彩时尚之旅的起点，美就源自这里</text>
+        </view>
+        <view class="writer flex-center">
+            <image class="header" src="http://oydnzfrbv.bkt.clouddn.com/header.png"></image>
+            <text class="nickName">A梦里遇见</text>
+        </view>
+        <image class="detailsImg" src="http://oydmq0ond.bkt.clouddn.com/kh3.jpg"></image>
+        <image class="detailsImg" src="http://oydmq0ond.bkt.clouddn.com/kh4.jpg"></image>
+    </view>
+</view>

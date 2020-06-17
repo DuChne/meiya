@@ -1,0 +1,254 @@
+<view>
+    <view class="userinfo rel">
+        <image class='userinfo-bg' src='/ywsq_sun/resource/images/bg.png'></image>
+        <view class='userinfo-content' bindtap="changeGraph">
+            <image class="userinfo-avatar" src="{{userInfo.avatar}}"></image>
+            <text class="userinfo-nickname">{{userInfo.nickname}}</text>
+            <text class="signature" wx:if="{{userInfo.autograph}}">{{userInfo.autograph}}</text>
+            <text class="signature" wx:if="{{!userInfo.autograph}}">赶紧去添加个性签名吧</text>
+        </view>
+        <view class="chechk-order" bindtap="mineOrder" data-index="0">
+            <!-- <view class="mine_item"> -->
+                <!-- <view class="mine_num">{{userInfo.order}}</view> -->
+            <view class="">我的订单</view>
+            <!-- </view> -->
+            <view class='chechk-all'>查看全部订单 <image src="/ywsq_sun/resource/images/go-to-select-active.png"></image></view>
+        </view>
+        <!-- <view bindtap="exchangeCoupon" class="getYhq ab">兑换优惠券</view> -->
+    </view>
+    <view class='arg-content'>
+      <view class="list-agr" data-index="1">
+          <view class="mine_num">{{userInfo.favour}}</view>
+          <view class="mine_classic">获赞</view>
+      </view>
+      <view bindtap="mineFocus" class="list-agr" data-index="2">
+          <view class="mine_num">{{userInfo.follow}}</view>
+          <view class="mine_classic">关注</view>
+      </view>
+      <view bindtap="mineFans" class="list-agr" data-index="3">
+          <view class="mine_num">{{userInfo.fan}}</view>
+          <view class="mine_classic">粉丝</view>
+      </view>
+    </view>
+    <view class="aboutBox">
+        <view class="aboutTab flex-center-spa">
+            <!-- <view bindtap="tabClick" class="aboutItem flex-center {{currentIdx==0?'active':''}}" data-index="0">
+                <view>回答</view>
+                <view class="about_num">({{userInfo.answer}})</view>
+            </view>
+            <view bindtap="tabClick" class="aboutItem flex-center {{currentIdx==1?'active':''}}" data-index="1">
+                <view>提问</view>
+                <view class="about_num">({{userInfo.question}})</view>
+            </view> -->
+            <view bindtap="tabClick" class="aboutItem flex-center {{currentIdx==2?'active':''}}" data-index="2">
+                <view>笔记</view>
+                <view class="about_num">({{userInfo.heart}})</view>
+            </view>
+            <view bindtap="tabClick" class="aboutItem flex-center {{currentIdx==3?'active':''}}" data-index="3">
+                <view>收藏</view>
+                <view class="about_num">({{userInfo.collection}})</view>
+            </view>
+        </view>
+        <scroll-view scrollY bindscrolltolower="lower" style='height:{{scrHeight}}rpx' class="ansList" wx:if="{{currentIdx==0}}">
+            <view bindtap="answDetails" class="ansItem" data-answerid="{{item.answer_id}}" wx:for="{{userAnswer}}">
+                <view class="answerT border_b">{{item.title}}</view>
+                <view class="ansCont flex-center">
+                    <image class="ansImg" src="{{item.image}}" wx:if="{{item.image}}"></image>
+                    <view class="rightBox flex1">
+                        <view class="con dot3">{{item.description}}</view>
+                    </view>
+                </view>
+                <view class="iconRow border_t">
+                    <image catchtap="delAnswer" class="delicon" data-answerid="{{item.answer_id}}" data-index="{{index}}" src="../../resource/images/index/delete.png"></image>
+                    <view class="flex-center">
+                        <image class="icon" src="../../resource/images/index/dianzan.png"></image>
+                        <view class="zanNum">{{item.favour}}</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <scroll-view scrollY bindscrolltolower="lower" style='height:{{scrHeight}}rpx' class="ansList" wx:if="{{currentIdx==1}}">
+            <view bindtap="askDetails" class="askItem" data-quesid="{{item.question_id}}" wx:for="{{userQuestion}}">
+                <view class="wenRow flex-center">
+                    <view class="wen">问</view>
+                    <view>{{item.title}}</view>
+                </view>
+                <view class="tagRow flex-center">
+                    <view class="tag" wx:for="{{item.tab}}" wx:for-item="items">#{{items.tab_name}}#</view>
+                </view>
+                <view class="answerRow border_t">
+                    <view class="flex-center">
+                        <image catchtap="delQues" class="delicon" data-index="{{index}}" data-quesid="{{item.question_id}}" src="../../resource/images/index/delete.png"></image>
+                        <view class="iconBox flex-center">
+                            <image class="iconA" src="../../resource/images/index/hd.png"></image>
+                            <view class="askaboutNum">{{item.answer}}</view>
+                        </view>
+                        <view class="flex-center">
+                            <image class="iconB" src="../../resource/images/index/sc.png"></image>
+                            <view class="askaboutNum">{{item.collection}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <!-- <scroll-view scrollY bindscrolltolower="lower" style='height:{{scrHeight}}rpx' class="ansList" wx:if="{{currentIdx==2}}"> -->
+            <view class='user-share-content' wx:if="{{currentIdx==2}}">
+              <view class='user-cou-left'>
+                <view class='share-list' bindtap='tipDetails' wx:for="{{userHeart}}" wx:if="{{item.heart_id&&index%2==0}}" data-tipid="{{item.heart_id}}" wx:key="{{index}}">
+                  <image mode="widthFix" class='img-content' src='{{item.image[item.image.length -1]}}'></image>
+                  <view class='share-content'>{{item.title}}</view>
+                  <view class='heam'>
+                  <!-- catchtap='goHisHome' -->
+                    <view data-userid='{{item.user_id}}' class='name'>
+                      <image src='{{userInfo.avatar}}'></image>
+                      <view>{{userInfo.nickname}}</view>
+                    </view>
+                    <view class='share'>
+                      <image src='../../resource/images/icon_heat.png'></image>
+                      <view>{{item.favour}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='user-cou-right'>
+                <view class='share-list' bindtap='tipDetails' wx:for="{{userHeart}}" wx:if="{{item.heart_id&&index%2!=0}}" data-tipid="{{item.heart_id}}" wx:key="{{index}}">
+                  <image mode="widthFix" class='img-content' src='{{item.image[item.image.length -1]}}'></image>
+                  <view class='share-content'>{{item.title}}</view>
+                  <view class='heam'>
+                    <view catchtap='goHisHome' data-userid='{{item.user_id}}' class='name'>
+                      <image src='{{userInfo.avatar}}'></image>
+                      <view>{{userInfo.nickname}}</view>
+                    </view>
+                    <view class='share'>
+                      <image src='../../resource/images/icon_heat.png'></image>
+                      <view>{{item.favour}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <!-- <view bindtap="tipDetails" class="tipsItem" data-tipid="{{item.heart_id}}" wx:for="{{userHeart}}">
+                <view class="ansCont flex-center">
+                    <image class="ansImg" src="{{item.image[0]}}" wx:if="{{item.image}}"></image>
+                    <view class="rightBox flex1">
+                        <view class="conTitle dot1">{{item.title}}</view>
+                        <view class="con dot3">{{item.description}}</view>
+                    </view>
+                </view>
+                <view class="iconRow border_t">
+                    <image catchtap="delTip" class="delicon" data-index="{{index}}" data-tipid="{{item.heart_id}}" src="../../resource/images/index/delete.png"></image>
+                    <view class="flex-center">
+                        <image catchtap="clickLike" class="likeicon" data-tipid="{{tipId}}" src="../../resource/images/index/dianzan.png"></image>
+                        <view class="zanNum">{{item.favour}}</view>
+                    </view>
+                    <view class="iconH flex-center">
+                        <image class="icon" src="../../resource/images/index/pinglun.png"></image>
+                    </view>
+                </view>
+            </view> -->
+        <!-- </scroll-view> -->
+        <!-- <scroll-view scrollY bindscrolltolower="lower" style='height:{{scrHeight}}rpx' class="ansList" wx:if="{{currentIdx==3}}"> -->
+        <view class='user-share-content' wx:if="{{currentIdx==3}}">
+              <view class='user-cou-left'>
+                <view class='share-list' bindtap='askDetails' wx:for="{{userCollection}}" wx:if="{{item.heart_id&&index%2==0}}" data-tipid="{{item.heart_id}}" wx:key="{{index}}">
+                  <image mode="widthFix" class='img-content' src='{{item.image[item.image.length -1]}}'></image>
+                  <view class='share-content'>{{item.title}}</view>
+                  <view class='heam'>
+                  <!-- catchtap='goHisHome' -->
+                    <view data-userid='{{item.user_id}}' class='name'>
+                      <image src='{{userInfo.avatar}}'></image>
+                      <view>{{userInfo.nickname}}</view>
+                    </view>
+                    <view class='share'>
+                      <image src='../../resource/images/icon_heat.png'></image>
+                      <view>{{item.favour}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='user-cou-right'>
+                <view class='share-list' bindtap='askDetails' wx:for="{{userCollection}}" wx:if="{{item.heart_id&&index%2!=0}}" data-tipid="{{item.heart_id}}" wx:key="{{index}}">
+                  <image mode="widthFix" class='img-content' src='{{item.image[item.image.length -1]}}'></image>
+                  <view class='share-content'>{{item.title}}</view>
+                  <view class='heam'>
+                    <view catchtap='goHisHome' data-userid='{{item.user_id}}' class='name'>
+                      <image src='{{userInfo.avatar}}'></image>
+                      <view>{{userInfo.nickname}}</view>
+                    </view>
+                    <view class='share'>
+                      <image src='../../resource/images/icon_heat.png'></image>
+                      <view>{{item.favour}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <!-- <view class="collItem" wx:for="{{userCollection}}">
+                <view bindtap="askDetails" class="collItem" data-quesid="{{item.question_id}}" wx:if="{{item.type==1}}">
+                    <view class="collectT flex-center">
+                        <view catchtap="goHisHome" data-userid="{{item.user_id}}">
+                            <image class="collHeader flex" src="{{item.avatar}}"></image>
+                        </view>
+                        <view class="collNick">{{item.nickname}}</view>
+                        <view class="ansQues">提出了问题</view>
+                    </view>
+                    <view class="wenRow flex-center">
+                        <view class="wen">问</view>
+                        <view>{{item.title}}</view>
+                    </view>
+                    <view class="tagRow flex-center">
+                        <view class="tag" wx:for="{{item.tab}}" wx:for-item="items">#{{items.tab_name}}#</view>
+                    </view>
+                    <view class="answerRow border_t">
+                        <view class="flex-center">
+                            <view class="iconBox flex-center">
+                                <image class="iconA" src="../../resource/images/index/hd.png"></image>
+                                <view class="askaboutNum">{{item.answer}}</view>
+                            </view>
+                            <view class="flex-center">
+                                <image class="iconB" src="../../resource/images/index/sc.png"></image>
+                                <view class="askaboutNum">{{item.collection}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view bindtap="tipDetails" class="tipsItem" data-tipid="{{item.heart_id}}" wx:if="{{item.type==2}}">
+                    <view class="collectT flex-center">
+                        <image class="collHeader flex" src="{{item.avatar}}"></image>
+                        <view class="collNick">{{item.nickname}}</view>
+                        <view class="ansQues">发布了笔记</view>
+                    </view>
+                    <view class="ansCont flex-center">
+                        <image class="ansImg" src="{{item.image[0]}}" wx:if="{{item.image}}"></image>
+                        <view class="rightBox flex1">
+                            <view class="conTitle dot1">{{item.title}}</view>
+                            <view class="con dot3">{{item.description}}</view>
+                        </view>
+                    </view>
+                    <view class="iconRow border_t">
+                        <view class="flex-center">
+                            <image catchtap="clickLike" class="likeicon" data-tipid="{{tipId}}" src="../../resource/images/index/dianzan.png"></image>
+                            <view class="zanNum">{{item.favour}}</view>
+                        </view>
+                        <view class="iconcBox flex-center">
+                            <image class="likeicon" src="../../resource/images/index/pinglun.png"></image>
+                        </view>
+                    </view>
+                </view>
+            </view> -->
+        <!-- </scroll-view> -->
+    </view>
+</view>
+<view hidden class="show-popup">
+    <view bindtap="closeTap" class="popup-mask"></view>
+    <view class="graphBox">
+        <view class="inputBox">
+            <input bindconfirm="sendComment" class="input" confirmType="send" placeholder="赶紧输入个性签名吧"></input>
+        </view>
+    </view>
+</view>
+<login bindwatch="updateUserInfo" login="true"></login>
+
+<!-- <view class="footerWrap">
+    <footer chooseNav="3"></footer>
+</view> -->

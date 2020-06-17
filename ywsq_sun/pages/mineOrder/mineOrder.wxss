@@ -1,0 +1,161 @@
+page {
+}
+
+.wall {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.status_box {
+    width: 100%;
+    height: 90rpx;
+    background-color: #fff;
+    position: fixed;
+    top: 20rpx;
+}
+
+.status_box>view:first-child {
+    margin: 0 0 0 20rpx;
+}
+
+.status_box>view:last-child {
+    margin: 0 20rpx 0 0;
+}
+
+.status_label {
+    line-height: 90rpx;
+    height: 100%;
+}
+
+.status_label.active {
+    border-bottom: 6rpx solid #000;
+    box-sizing: border-box;
+}
+
+.orderList {
+    margin: 110rpx 0 0 0;
+}
+
+.item {
+    margin: 0 0 20rpx;
+    background-color: #fff;
+}
+
+.title {
+    height: 94rpx;
+    padding: 0 20rpx;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.shopIcon {
+    width: 40rpx;
+    height: 40rpx;
+    margin: 0 20rpx 0 0;
+}
+
+.shopName {
+    font-size: 28rpx;
+}
+
+.arrow {
+    width: 10rpx;
+    height: 18rpx;
+    margin: 0 0 0 20rpx;
+}
+
+.status {
+    color: #f86738;
+}
+
+.buyMesBox {
+    padding: 20rpx;
+    min-height: 180rpx;
+    background-color: #f2f2f2;
+}
+
+.goodsImg {
+    width: 180rpx;
+    height: 180rpx;
+    margin: 0 30rpx 0 0;
+}
+
+.goodsName {
+    line-height: 30rpx;
+}
+
+.guige {
+    color: #666;
+    font-size: 26rpx;
+    line-height: 26rpx;
+    margin: 20rpx 0 0 0;
+}
+
+.singleP {
+    color: #000;
+    font-size: 28rpx;
+    margin: 0 0 0 20rpx;
+}
+
+.num {
+    color: #666;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    text-align: right;
+    margin: 30rpx 0 20rpx;
+}
+
+.coupons {
+    color: #666;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    text-align: right;
+    padding: 20rpx;
+}
+
+.order_guige {
+    height: 80rpx;
+    color: #666;
+    background-color: #fff;
+    padding: 0 20rpx;
+}
+
+.price {
+    color: #f86738;
+}
+
+.totalP {
+    font-size: 28rpx;
+    line-height: 28rpx;
+    color: #333;
+    text-align: right;
+}
+
+.btnRow {
+    padding: 0 20rpx;
+    height: 90rpx;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    width: 180rpx;
+    height: 50rpx;
+    border-radius: 5rpx;
+    text-align: center;
+    line-height: 50rpx;
+    box-sizing: border-box;
+}
+
+.cancle {
+    border: 1rpx solid #333;
+    color: #333;
+}
+
+.pay {
+    border: 1rpx solid #F86738;
+    color: #F86738;
+    margin: 0 0 0 20rpx;
+}

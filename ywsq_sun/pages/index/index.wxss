@@ -1,0 +1,487 @@
+pages{
+  background-color: #FFF;
+}
+.swiper_box {
+    width: 702rpx;
+    height: 285rpx;
+    margin: 0 auto;
+}
+
+.slide-image {
+    width: 100%;
+    height: 285rpx;
+    border-radius: 6rpx;
+}
+
+.act {
+    height: 160rpx;
+    background-color: #fff;
+    padding: 0 40rpx;
+    margin: 20rpx 0;
+}
+.icon-resource-content{
+  width: 702rpx;
+  margin: 0 auto;
+  border-bottom: 1rpx solid #D2D2D2;
+  height: 104rpx;
+  display: flex;
+  align-items: center;
+}
+.icon-resource-content .icon-txx{
+  display: flex;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+}
+.icon-resource-content .icon-sx{
+  height: 46rpx;
+  border-radius: 23rpx;
+  display: flex;
+  align-items: center;
+  background-color: #F5F5F5;
+  padding: 0 11rpx;
+  margin-right: 27rpx;
+  flex: 1;
+}
+.icon-resource-content .icon-sx text{
+  font-size: 25rpx;
+  color: #555555;
+  display: block;
+}
+.icon-resource-content .icon-txx .icon_j{
+  display: block;
+  width: 31rpx;
+  height: 31rpx;
+  padding-right: 5rpx;
+}
+.experience-content{
+  border-bottom: 18rpx solid #F5F5F5;
+}
+.click-Experience{
+  width: 728rpx;
+  height: 168rpx;
+  display: block;
+  margin: 0 auto;
+  padding-top: 20rpx;
+}
+.ya-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 750rpx;
+}
+.user-share-content{
+  display: flex;
+  margin-left: 25rpx;
+  padding-top: 30rpx;
+  flex-wrap: wrap;
+}
+.user-cou-left{
+  width: 343rpx;
+  margin-right: 16rpx;
+}
+.user-cou-right{
+  width: 343rpx;
+}
+.user-share-content .share-list{
+  width: 343rpx;
+  /* height: 500rpx; */
+  border-radius: 16rpx;
+  position: relative;
+  overflow: hidden;
+  margin-right: 16rpx;
+  box-shadow: 0 0 3rpx 0rpx #D2D2D2;
+  margin-bottom: 17rpx;
+}
+.user-share-content .share-list .img-content{
+  width: 343rpx;
+  /* height: 383rpx; */
+  display: block;
+  /* padding-bottom: 13rpx; */
+}
+.user-share-content .share-list .share-content{
+  width: 292rpx;
+  margin: 0 auto;
+  /* line-height: 1.2em; */
+  /* color: #333333; */
+  /* height: 44rpx; */
+  /* font-size: 18rpx; */
+
+  color:#333;
+  line-height:40rpx;
+  font-size:26rpx;
+  font-weight:bold;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  margin-top:20rpx;
+  word-break:break-all;
+  /* max-width:305rpx; */
+
+}
+.user-share-content .share-list .heam{
+  display: flex;
+  justify-content: space-between;
+  width: 292rpx;
+  margin: 0 auto;
+  padding-top: 14rpx;
+  padding-bottom: 14rpx;
+}
+.user-share-content .share-list .heam .name{
+  display: flex;
+  font-size: 20rpx;
+  color: #555555;
+  align-items: center;
+}
+.user-share-content .share-list .heam .name image{
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  border-radius: 50%;
+  margin-right: 13rpx;
+}
+.user-share-content .share-list .share{
+  display: flex;
+  align-items: center;
+  font-size: 18rpx;
+  color: #858585;
+}
+.user-share-content .share-list .share image{
+  width: 36rpx;
+  height: 36rpx;
+  display: flex;
+  margin-right: 6rpx;
+  /* border-radius: 50%; */
+}
+.ya-list .buy{
+  width: 137rpx;
+  padding-top: 34rpx;
+}
+.ya-list .buy .icon{
+  width: 97rpx;
+  height: 97rpx;
+  display: block;
+  margin: 0 auto;
+}
+.ya-list .buy .text{
+  text-align: center;
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 24rpx;
+}
+.theme_icon {
+    width: 60rpx;
+    height: 60rpx;
+    margin: 0 0 16rpx 0;
+    display: flex;
+}
+
+.notag {
+    color: #666;
+    font-size: 26rpx;
+}
+
+.tag {
+    padding: 20rpx;
+    background-color: #fff;
+}
+
+.tagTitle {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.more {
+    width: 10rpx;
+    height: 20rpx;
+    margin: 0 0 0 15rpx;
+}
+
+.tagBox {
+    margin: 20rpx 0 0 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.tagItem {
+    width: 224rpx;
+    height: 160rpx;
+    margin: 0 18rpx 0 0;
+}
+
+.tagImg {
+    width: 225rpx;
+    height: 160rpx;
+}
+
+.tagBorder {
+    width: 180rpx;
+    height: 96rpx;
+    border: 5rpx solid #fff;
+    top: 32rpx;
+    left: 22rpx;
+    text-align: center;
+    line-height: 96rpx;
+    box-sizing: border-box;
+}
+
+.tagName {
+    font-size: 35rpx;
+    font-weight: bold;
+    color: #fff;
+}
+
+.ans {
+    margin: 20rpx 0 0;
+}
+
+.ansTitle {
+    height: 90rpx;
+    padding: 0 20rpx;
+    background-color: #fff;
+}
+
+.push {
+    color: #000;
+}
+
+.header {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 100%;
+    margin: 0 -25rpx 0 0;
+}
+
+.header:last-child {
+    margin: 0;
+}
+
+.arrow {
+    width: 15rpx;
+    height: 25rpx;
+    margin: 0 0 0 20rpx;
+}
+
+.ansItem {
+    margin: 20rpx 20rpx 30rpx;
+    height: 480rpx;
+    background: rgba(255,255,255,1);
+    box-shadow: 0rpx 2rpx 3rpx rgba(0,0,0,0.1);
+}
+
+.ansItem:last-child {
+    margin: 20rpx;
+}
+
+.imgBox {
+    width: 100%;
+    height: 345rpx;
+}
+
+.ansImg {
+    width: 100%;
+    height: 345rpx;
+    display: flex;
+}
+
+.ansTag {
+    width: 145rpx;
+    height: 40rpx;
+    background: rgba(3,2,0,1);
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 26rpx;
+    color: #fff;
+    top: 65rpx;
+    left: 0;
+}
+
+.ansName {
+    margin: 10rpx 20rpx 0;
+    text-align: center;
+}
+
+.heng {
+    width: 80rpx;
+    height: 4rpx;
+    background: rgba(204,204,204,1);
+    margin: 14rpx auto;
+    text-align: center;
+}
+
+.author {
+    font-size: 26rpx;
+    color: #999;
+    text-align: center;
+}
+
+.showBox {
+    position: fixed;
+    top: 306rpx;
+    left: 55rpx;
+    width: 640rpx;
+    height: 770rpx;
+    overflow: hidden;
+    background: rgba(255,255,255,1);
+    border-radius: 10rpx;
+    z-index: 11;
+    color: #fff;
+}
+
+.jianbian {
+    height: 466rpx;
+}
+
+.linearImg {
+    width: 100%;
+    height: 466rpx;
+}
+
+.everyday {
+    font-size: 36rpx;
+    line-height: 36rpx;
+    margin: 40rpx auto 30rpx;
+}
+
+.signFor {
+    font-size: 28rpx;
+    line-height: 28rpx;
+}
+
+.hx {
+    width: 600rpx;
+    height: 2rpx;
+    margin: 32rpx auto 58rpx;
+    border-top: 1rpx solid #fff;
+}
+
+.jifen {
+    font-size: 26rpx;
+    line-height: 60rpx;
+}
+
+.signText {
+    font-size: 26rpx;
+    line-height: 26rpx;
+    color: #999;
+    margin: 40rpx 30rpx 0 70rpx;
+}
+
+.signText:nth-child(3) {
+    margin: 30rpx 30rpx 50rpx 70rpx;
+}
+
+.backIndex {
+    width: 450rpx;
+    height: 84rpx;
+    line-height: 84rpx;
+    border: 1rpx solid #000;
+    margin: 0 auto;
+    color: #000;
+}
+
+.jia {
+    font-size: 50rpx;
+    line-height: 70rpx;
+}
+
+.num {
+    font-size: 150rpx;
+    line-height: 150rpx;
+}
+
+.qianwen {
+    font-size: 28rpx;
+}
+
+.psPage {
+    background-color: #fff;
+}
+
+.searchWrap {
+    background-color: #efefef;
+    height: 100rpx;
+    justify-content: center;
+}
+
+.searchBox {
+    width: 92%;
+    height: 60rpx;
+    background-color: #fff;
+    margin: 0 30rpx;
+    border-radius: 20rpx;
+    font-size: 30rpx;
+    justify-content: center;
+}
+
+.bannerImgs {
+    width: 690rpx;
+    margin: 20rpx 30rpx 50rpx;
+    height: 350rpx;
+    border-radius: 10rpx;
+}
+
+.jxList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.jxImgs {
+    width: 320rpx;
+    height: 180rpx;
+    border-radius: 10rpx;
+}
+
+.jxItem {
+    margin-bottom: 50rpx;
+}
+
+.jxBox {
+    font-size: 30rpx;
+    padding: 0 30rpx;
+}
+
+.jxTitle {
+    font-weight: bold;
+    margin-bottom: 30rpx;
+}
+
+.zhichi {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50rpx;
+    margin-top: 50rpx;
+}
+
+.logob_box {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.center_word {
+    font-size: 26rpx;
+    color: #000;
+    text-align: center;
+    margin: 0 20rpx;
+}
+
+.logo_b {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 100%;
+}
+
+.callphone {
+    width: 70rpx;
+    height: 40rpx;
+    border-radius: 5rpx;
+    background-color: #ff5555;
+    text-align: center;
+    line-height: 40rpx;
+    color: #fff;
+    font-size: 26rpx;
+}

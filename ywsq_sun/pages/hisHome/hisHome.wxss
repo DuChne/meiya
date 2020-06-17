@@ -1,0 +1,469 @@
+.getYhq {
+    width: 160rpx;
+    height: 40rpx;
+    background-color: #FFFAF8;
+    border: 1rpx solid #F86738;
+    border-radius: 20rpx;
+    font-size: 26rpx;
+    color: #F86738;
+    line-height: 40rpx;
+    text-align: center;
+    top: 60rpx;
+    right: 22rpx;
+}
+
+.userinfo {
+    /* position: fixed; */
+    top: 20rpx;
+    width: 100%;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.userinfo-avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 100%;
+    margin: 20rpx auto;
+    display: flex;
+}
+
+.userinfo-nickname {
+    font-size: 36rpx;
+    line-height: 36rpx;
+    margin: 0 auto;
+}
+
+.signature {
+    height: 26rpx;
+    font-size: 26rpx;
+    line-height: 26rpx;
+    color: #999;
+    margin: 20rpx auto;
+}
+
+.focus {
+    width: 100rpx;
+    height: 40rpx;
+    background: rgba(0,0,0,1);
+    border-radius: 20rpx;
+    text-align: center;
+    line-height: 40rpx;
+    color: #fff;
+    margin: 0 auto 32rpx;
+}
+
+.focus.active {
+    background-color: #999;
+    padding: 0 5rpx;
+}
+
+.item_box {
+    height: 70rpx;
+    padding: 0 0 10rpx 0;
+}
+
+.right {
+    padding: 0 22rpx 0 66rpx;
+}
+
+.mine_item {
+    position: relative;
+}
+
+.item_box>.mine_item:first-child {
+    width: 35%;
+    border-right: 1rpx solid #DEDBDB;
+}
+
+.mine_num {
+    color: #333;
+    font-size: 30rpx;
+}
+
+.mine_classic {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.wall {
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+}
+
+.walls {
+    width: 100%;
+    height: 20rpx;
+    background-color: #f2f2f2;
+    /* position: fixed; */
+    top: 338rpx;
+    z-index: 10;
+}
+
+.aboutBox {
+    margin: 0 0 20rpx;
+}
+
+.aboutTab {
+    /* position: fixed; */
+    top: 358rpx;
+    width: 100%;
+    height: 90rpx;
+    border-bottom: 1rpx solid #DADCE3;
+    background-color: #fff;
+}
+
+.ansList {
+    margin: 450rpx 0 0;
+}
+
+.aboutItem {
+    height: 100%;
+    font-size: 28rpx;
+    color: #999;
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.aboutItem:first-child {
+    margin: 0 0 0 20rpx;
+}
+
+.aboutItem:last-child {
+    margin: 0 20rpx 0 0;
+}
+
+.aboutItem.active {
+    color: #000;
+    border-bottom: 6rpx solid #000;
+    box-sizing: border-box;
+}
+
+.about_num {
+    font-size: 26rpx;
+    color: #999;
+    margin: 0 0 0 20rpx;
+}
+
+.ansItem {
+    margin: 0 0 20rpx;
+    background-color: #fff;
+}
+
+.answerT {
+    height: 106rpx;
+    line-height: 106rpx;
+    padding: 0 20rpx;
+    font-size: 28rpx;
+}
+
+.ansCont {
+    padding: 20rpx 34rpx 20rpx 20rpx;
+}
+
+.conTitle {
+}
+
+.con {
+    font-size: 26rpx;
+    color: #999;
+    margin: 10rpx 0 0 0;
+}
+
+.ansImg {
+    width: 200rpx;
+    height: 180rpx;
+    margin: 0 30rpx 0 0;
+    display: block;
+}
+
+.rightBox {
+}
+
+.iconcBox {
+    margin: 0 0 0 70rpx;
+}
+
+.icon {
+    width: 45rpx;
+    height: 40rpx;
+}
+
+.iconRow {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 40rpx 0 20rpx;
+    height: 74rpx;
+}
+
+.zanNum {
+    margin: -30rpx -20rpx 0 0;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.askItem {
+    margin: 0 0 20rpx;
+    padding: 30rpx 0 0;
+    background-color: #fff;
+}
+
+.wen {
+    width: 30rpx;
+    height: 30rpx;
+    background-color: #F86738;
+    color: #fff;
+    font-size: 24rpx;
+    margin: 0 20rpx 0 0;
+    text-align: center;
+    line-height: 30rpx;
+}
+
+.wenRow {
+    margin: 0 20rpx 30rpx;
+}
+
+.tagRow {
+    margin: 0 20rpx 30rpx;
+    line-height: 28rpx;
+}
+
+.tag {
+    color: #0A1D53;
+    font-size: 28rpx;
+    margin: 0 20rpx 0 0;
+}
+
+.answerRow {
+    height: 90rpx;
+    box-sizing: border-box;
+    padding: 0 20rpx;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.meAns {
+    width: 160rpx;
+    height: 50rpx;
+    border-radius: 10rpx;
+    border: 1rpx solid #000;
+    text-align: center;
+    line-height: 50rpx;
+}
+
+.iconBox {
+    margin: 0 50rpx 0 0;
+}
+
+.iconB {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.iconA {
+    width: 40rpx;
+    height: 35rpx;
+}
+
+.askaboutNum {
+    font-size: 26rpx;
+    color: #999;
+    margin: 0 0 0 20rpx;
+}
+
+.iconH {
+    margin: 0 0 0 50rpx;
+}
+
+.tipsItem {
+    background-color: #fff;
+    margin: 0 0 20rpx;
+}
+
+.tipsGoods {
+    line-height: 30rpx;
+    margin: 0 0 20rpx 0;
+}
+
+.tipsDesc {
+    font-size: 26rpx;
+    color: #666;
+}
+
+.tipsImg {
+    width: 200rpx;
+    height: 180rpx;
+    margin: 0 30rpx 0 0;
+}
+
+.collItem {
+    background-color: #fff;
+    margin: 0 0 20rpx;
+}
+
+.collectT {
+    padding: 40rpx 20rpx 20rpx;
+}
+
+.collHeader {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 100%;
+}
+
+.collNick {
+    margin: 0 25rpx;
+}
+
+.ansQues {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.role {
+    width: 300rpx;
+    height: 1rpx;
+    border-bottom: 1rpx solid rgba(242,242,242,1);
+    box-sizing: border-box;
+}
+
+.ansText {
+    font-size: 24rpx;
+    color: #999;
+    margin: 0 26rpx;
+}
+
+.likeicon {
+    width: 45rpx;
+    height: 40rpx;
+}
+
+.views {
+    margin: 0 0 0 40rpx;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.fsIcon {
+    display: block;
+    width: 170rpx;
+    height: 170rpx;
+    margin: 80rpx auto 40rpx;
+}
+
+.succText {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.back {
+    width: 450rpx;
+    height: 80rpx;
+    border: 1rpx solid #000;
+    font-size: 32rpx;
+    line-height: 80rpx;
+    margin: 37rpx auto 0;
+}
+
+.showBox {
+    /* position: fixed; */
+    top: 325rpx;
+    left: 55rpx;
+    width: 640rpx;
+    height: 480rpx;
+    background: rgba(255,255,255,1);
+    border-radius: 10rpx;
+    z-index: 11;
+}
+.user-share-content{
+  display: flex;
+  margin-left: 25rpx;
+  padding-top: 30rpx;
+  flex-wrap: wrap;
+}
+.user-cou-left{
+  width: 343rpx;
+  margin-right: 16rpx;
+}
+.user-cou-right{
+  width: 343rpx;
+}
+.user-share-content .share-list{
+  width: 343rpx;
+  /* height: 500rpx; */
+  border-radius: 16rpx;
+  position: relative;
+  overflow: hidden;
+  margin-right: 16rpx;
+  box-shadow: 0 0 3rpx 0rpx #D2D2D2;
+  margin-bottom: 17rpx;
+}
+.user-share-content .share-list .img-content{
+  width: 343rpx;
+  /* height: 383rpx; */
+  display: block;
+  /* padding-bottom: 13rpx; */
+}
+.user-share-content .share-list .share-content{
+  width: 292rpx;
+  margin: 0 auto;
+  /* line-height: 1.2em; */
+  /* color: #333333; */
+  /* height: 44rpx; */
+  /* font-size: 18rpx; */
+
+  color:#333;
+  line-height:40rpx;
+  font-size:26rpx;
+  font-weight:bold;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  margin-top:20rpx;
+  word-break:break-all;
+  /* max-width:305rpx; */
+
+}
+.user-share-content .share-list .heam{
+  display: flex;
+  justify-content: space-between;
+  width: 292rpx;
+  margin: 0 auto;
+  padding-top: 14rpx;
+  padding-bottom: 14rpx;
+}
+.user-share-content .share-list .heam .name{
+  display: flex;
+  font-size: 20rpx;
+  color: #555555;
+  align-items: center;
+}
+.user-share-content .share-list .heam .name image{
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  border-radius: 50%;
+  margin-right: 13rpx;
+}
+.user-share-content .share-list .share{
+  display: flex;
+  align-items: center;
+  font-size: 18rpx;
+  color: #858585;
+}
+.user-share-content .share-list .share image{
+  width: 36rpx;
+  height: 36rpx;
+  display: flex;
+  margin-right: 6rpx;
+  /* border-radius: 50%; */
+}

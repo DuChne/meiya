@@ -1,0 +1,173 @@
+.arrow {
+    width: 10rpx;
+    height: 20rpx;
+}
+
+.kuaidiAddress {
+    padding: 30rpx 30rpx;
+    font-size: 28rpx;
+    color: #000;
+    margin-top: 20rpx;
+    background-color: #fff;
+    position: relative;
+    text-align: left;
+    line-height: normal;
+}
+
+.positionIcon {
+    width: 30rpx;
+    height: 40rpx;
+    margin: 0 20rpx 0 0;
+}
+
+.name-number {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shipping-address {
+    margin-top: 10rpx;
+}
+
+.bottomBorder {
+    width: 750rpx;
+    height: 10rpx;
+    position: absolute;
+    left: 0rpx;
+    bottom: 0rpx;
+}
+
+.item {
+    margin: 20rpx 0;
+    background-color: #fff;
+}
+
+.title {
+    height: 60rpx;
+    padding: 0 20rpx;
+}
+
+.shopIcon {
+    width: 40rpx;
+    height: 40rpx;
+    margin: 0 20rpx 0 0;
+}
+
+.shopName {
+    font-size: 28rpx;
+}
+
+.arrow {
+    width: 10rpx;
+    height: 20rpx;
+    margin: 0 0 0 20rpx;
+}
+
+.delete {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.buyMesBox {
+    padding: 20rpx;
+    height: 180rpx;
+    background-color: #f2f2f2;
+}
+
+.radioBox {
+    line-height: 100%;
+}
+
+.goodsImg {
+    width: 180rpx;
+    height: 180rpx;
+    margin: 0 30rpx 0 0;
+}
+
+.goodsName {
+    line-height: 30rpx;
+}
+
+.guige {
+    color: #666;
+    font-size: 26rpx;
+    line-height: 26rpx;
+    margin: 20rpx 0 0 0;
+}
+
+.singleP {
+    color: #000;
+    font-size: 28rpx;
+}
+
+.num {
+    color: #666;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    text-align: right;
+    margin: 30rpx 0 20rpx;
+}
+
+.totalP {
+    font-size: 28rpx;
+    line-height: 28rpx;
+    color: #333;
+    text-align: right;
+}
+
+.btnRow {
+    padding: 0 20rpx;
+    height: 90rpx;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.row {
+    height: 80rpx;
+    padding: 0 20rpx;
+}
+
+.type {
+    font-size: 28rpx;
+}
+
+.way {
+    font-size: 26rpx;
+    color: #666;
+}
+
+.money {
+    color: #f86738;
+    font-size: 28rpx;
+}
+
+.footerBox {
+    height: 100rpx;
+}
+
+.footer {
+    width: 100%;
+    height: 100rpx;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+}
+
+.pushBtn {
+    width: 255rpx;
+    height: 100rpx;
+    background-color: #F86738;
+    color: #fff;
+    font-size: 36rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+
+.leftBox {
+    font-size: 36rpx;
+}
+
+.addMoney {
+    color: #f86738;
+}

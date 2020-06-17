@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "ywsq_sun/pages/address/address",
+    "ywsq_sun/pages/index/index",
+    "ywsq_sun/pages/coupons/coupons",
+    "ywsq_sun/pages/tagUnderList/tagUnderList",
+    "ywsq_sun/pages/commentList/commentList",
+    "ywsq_sun/pages/hisHome/hisHome",
+    "ywsq_sun/pages/mine/mine",
+    "ywsq_sun/pages/toPayOrder/toPayOrder",
+    "ywsq_sun/pages/shoppingCart/shoppingCart",
+    "ywsq_sun/pages/signForYhq/signForYhq",
+    "ywsq_sun/pages/orderDetails/orderDetails",
+    "ywsq_sun/pages/editData/editData",
+    "ywsq_sun/pages/goodsDetail/goodsDetail",
+    "ywsq_sun/pages/mineOrder/mineOrder",
+    "ywsq_sun/pages/mineFocus/mineFocus",
+    "ywsq_sun/pages/mineFans/mineFans",
+    "ywsq_sun/pages/recommAnser/recommAnser",
+    "ywsq_sun/pages/allTag/allTag",
+    "ywsq_sun/pages/test/test",
+    "ywsq_sun/pages/askList/askList",
+    "ywsq_sun/pages/comment/comment",
+    "ywsq_sun/pages/tips/tips",
+    "ywsq_sun/pages/answer/answer",
+    "ywsq_sun/pages/ask/ask",
+    "ywsq_sun/pages/answerDeta/answerDeta",
+    "ywsq_sun/pages/allSelected/allSelected",
+    "ywsq_sun/pages/tipDetails/tipDetails",
+    "ywsq_sun/pages/found/found",
+    "ywsq_sun/pages/selRecommend/selRecommend",
+    "ywsq_sun/pages/probDetails/probDetails",
+    "ywsq_sun/pages/shopping/shopping",
+    "ywsq_sun/pages/psDetails/psDetails",
+    "ywsq_sun/pages/doctorConsultation/index",
+    "ywsq_sun/pages/consultationRecord/index",
+    "ywsq_sun/pages/doctorAnswer/index",
+    "ywsq_sun/pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#BFBFBF",
+    "selectedColor": "#4CD6C0",
+    "list": [
+      {
+        "pagePath": "ywsq_sun/pages/index/index",
+        "iconPath": "ywsq_sun/resource/images/icon-index.png",
+        "selectedIconPath": "ywsq_sun/resource/images/icon-index-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "ywsq_sun/pages/tips/tips",
+        "iconPath": "ywsq_sun/resource/images/icon-pen.png",
+        "selectedIconPath": "ywsq_sun/resource/images/icon-pen-active.png",
+        "text": "笔记"
+      },
+      {
+        "pagePath": "ywsq_sun/pages/doctorConsultation/index",
+        "iconPath": "ywsq_sun/resource/images/icon-consultation.png",
+        "selectedIconPath": "ywsq_sun/resource/images/icon-consultation-active.png",
+        "text": "咨询"
+      },
+      {
+        "pagePath": "ywsq_sun/pages/mine/mine",
+        "iconPath": "ywsq_sun/resource/images/icon-me.png",
+        "selectedIconPath": "ywsq_sun/resource/images/icon-me-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

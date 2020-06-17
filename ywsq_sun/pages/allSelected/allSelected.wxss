@@ -1,0 +1,33 @@
+page {
+    background-color: #fff;
+}
+
+.bigWrap {
+    padding: 0 20rpx;
+    background-color: #fff;
+}
+
+.title {
+    height: 64rpx;
+    line-height: 64rpx;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.row {
+    height: 70rpx;
+}
+
+.img {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.text {
+    margin: 0 20rpx;
+}
+
+.arrow {
+    width: 20rpx;
+    height: 30rpx;
+}

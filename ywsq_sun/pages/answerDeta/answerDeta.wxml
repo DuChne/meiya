@@ -1,0 +1,52 @@
+<view class="bigWrap">
+    <view class="main">
+        <view class="nameRow flex-center border_b">
+            <image class="header" src="{{answerDetails.avatar}}"></image>
+            <view class="nick flex1 dot">{{answerDetails.nickname}}</view>
+        </view>
+        <view class="flex-center">
+            <view class="tag" wx:for="{{answerDetails.tab}}">#{{item.tab_name}}#</view>
+        </view>
+        <view class="title">{{answerDetails.title}}</view>
+        <text class="contents">{{answerDetails.description}}</text>
+        <image bindtap="bindPreview" class="ansimg flex" data-index="{{index}}" mode="widthFix" src="{{item}}" wx:if="{{answerDetails.image}}" wx:for="{{answerDetails.image}}"></image>
+    </view>
+    <view class="others">
+        <view class="otherTips">TA的其他心得</view>
+        <view class="noTips" wx:if="{{tipDetails.length==0}}">暂无其他心得</view>
+        <view bindtap="tipDetails" class="item flex-center" data-tipid="{{item.heart_id}}" wx:for="{{tipDetails}}">
+            <image class="img flex" src="{{item.image[0]}}" wx:if="{{item.image}}"></image>
+            <view class="right flex1">
+                <view class="ansTitle dot1">{{item.title}}</view>
+                <view class="ansCon dot2">{{item.description}}</view>
+            </view>
+        </view>
+        <view bindtap="hisHomeTap" class="moreBtn center" data-userid="{{answerDetails.user_id}}">进入个人主页查看更多心得</view>
+    </view>
+    <view class="commentsList">
+        <view class="commItem border_b" wx:for="{{commentsList}}">
+            <view class="flex-center">
+                <image class="header" src="{{item.avatar}}"></image>
+                <view class="nick flex1">{{item.nickname}}</view>
+                <view class="commTime">{{item.addtime}}</view>
+            </view>
+            <view class="comcontents">{{item.content}}</view>
+        </view>
+        <view class="moreComm" wx:if="{{commentsList.length==3}}">更多评论请见评论列表~</view>
+    </view>
+    <view class="box">
+        <view class="comment flex-center-spa">
+            <view class="commentBox flex-center">
+                <input bindinput="input" class="input" maxlength="-1" placeholder="留个评论再走吧！" value="{{content}}"></input>
+                <view bindtap="sendComment" class="deter">确定</view>
+            </view>
+            <view class="flex-center flex1">
+                <image bindtap="allComments" class="icon" data-answerid="{{answerDetails.answer_id}}" src="../../resource/images/index/pinglun.png"></image>
+                <view class="zanBox flex-center">
+                    <image bindtap="clickLike" class="icon" data-answerid="{{answerDetails.answer_id}}" src="../../resource/images/index/dianzan.png"></image>
+                    <view class="zanNum">{{tipLike}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

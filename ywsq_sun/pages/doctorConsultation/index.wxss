@@ -1,0 +1,168 @@
+/* ywsq_sun/pages/doctorConsultation/index.wxss */
+.doctor-consultation-banner{
+  width: 750rpx;
+  height: 390rpx;
+  display: block;
+}
+.recording-content{
+  display: flex;
+  height: 94rpx;
+  border-bottom: 1rpx solid #F6F6FA;
+  align-items: center;
+}
+.recording-content .recording-list{
+  width: 50%;
+  /* justify-content: center; */
+  padding-left: 22rpx;
+  display: flex;
+  align-items: center;
+}
+.recording-content .reco-icon{
+  width: 62rpx;
+  height: 62rpx;
+  display: block;
+}
+.recording-content .reco-text{
+  margin: 0 16rpx;
+}
+.recording-content .record-right{
+  /* text-align: right; */
+  border-left: 1rpx solid #F6F6FA;
+}
+.reco-title{
+  font-size: 28rpx;
+  color: #555555;
+  line-height: 1em;
+}
+.reco-subtitle{
+  color: #828282;
+  font-size: 20rpx;
+}
+.good-doctor{
+  display: flex;
+  border-left: 5rpx solid #4CD6C0;
+  height: 30rpx;
+  line-height: 1em;
+  align-items: center;
+  margin-top: 22rpx;
+  margin-left: 24rpx;
+  padding-left: 11rpx;
+  margin-bottom: 22rpx;
+}
+.good-doctor .title{
+  color: #000000;
+  font-size: 26rpx;
+}
+.good-doctor .platform{
+  color: #7A7A7A;
+  font-size: 18rpx;
+  padding-left: 18rpx;
+}
+.doctor-content{
+  width: 703rpx;
+  height: 347rpx;
+  box-shadow: 0 0 5px 0 #F6F6FA;
+  border-radius: 15rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  display: flex;
+  position: relative;
+}
+.user-left{
+  width: 152rpx;
+  /* justify-content: center;
+  display: flex; */
+  padding-top: 32rpx;
+  /* flex-wrap: wrap;
+  align-items: start; */
+}
+.user-head{
+  width: 124rpx;
+  height: 124rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.user-left .score{
+  color: #FF9900;
+  font-size: 34rpx;
+  line-height: 1em;
+  padding-top: 20rpx;
+  text-align: center;
+}
+.user-right{
+  padding-left: 24rpx;
+}
+.user-right .name{
+  font-size: 34rpx;
+  color: #444444;
+  line-height: 1em;
+  padding-top: 34rpx;
+}
+.subject{
+  display: flex;
+  line-height: 1em;
+  font-size: 29rpx;
+  color: #8E8E8E;
+  padding-top: 22rpx;
+}
+.subject .sub{
+  padding-left: 38rpx;
+}
+.user-right .label-d{
+  display: flex;
+  padding-top: 25rpx;
+  color: #525252;
+  font-size: 29rpx;
+}
+.user-right .label-d .label{
+  height: 30rpx;
+  line-height: 30rpx;
+  padding: 0 14rpx;
+  display: inline-block;
+  border: 1rpx solid #FF9800;
+  font-size: 24rpx;
+  color: #FF9800;
+}
+.user-right .text-label{
+  padding-left: 32rpx;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  position:relative;
+  width: 360rpx;
+}
+.label-details{
+  margin-top: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  color: #525252;
+  font-size: 28rpx;
+  width: 523rpx;
+}
+.help-man{
+  color: #525252;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  height: 30rpx;
+}
+.new-contact{
+  position: absolute;
+  right: 16rpx;
+  bottom: 30rpx;
+  color: #FFF;
+  font-size: 28rpx;
+  text-align: center;
+  width: 177rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  display: block;
+  background-color: #00C7A9;
+  padding: 0;
+  margin: 0;
+  border-radius: 26rpx;
+}

@@ -1,0 +1,33 @@
+<view id="home">
+  <view class="ti"  catchtap="selectAddress">
+    <view class="ti_top">
+      <text style="font-size:30rpx;">陈建军</text>
+      <text class="dian">13751324427</text>
+      <view class="i_top flex newBoor">
+        <text class="dizhi">广东省深圳市南山对讲机就能说了贷款</text>
+      </view>
+    </view>
+
+    <view class="flex_b">
+      <view class="flex img_t" catchtap="huan_i" data-address-id="{{item.id}}" data-is_default="{{index}}">
+        <image src="{{1 =='1'?'../../resource/images/goxuan.png':'/static/images/di_w.png'}}" class="di_xa" ></image>
+        <view class="she">设为默认地址</view>
+      </view>
+      
+      <view class="flex img_ad">
+        <text class="xiu" catchtap="addressAddOrUpdate">修改
+          
+        </text>
+        <text class="xiu" catchtap="deleteAddress" data-addressid="{{item.id}}">删除</text>        
+      </view>
+    </view>
+  </view>
+ 
+  
+
+  <view class="tian_d" bindtap="addressAddOrUpdate">+添加新地址</view>
+</view>
+<view class="empty-view" wx:if="{{ addressList.length <= 0 }}">
+      <image class="icon" src="/static/images/ic_no_address.png"></image>
+      <text class="text">还没有收货地址</text>
+    </view>

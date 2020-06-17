@@ -1,0 +1,99 @@
+<view class="bigWrap">
+    <view class="">
+        <!-- <view class="writerMes flex-center border_b rel">
+            <view catchtap="goHisHome" data-userid="{{tipDetails.user_id}}">
+                <image class="header" src="{{tipDetails.avatar}}"></image>
+            </view>
+            <view class="nickName dot">{{tipDetails.nickname}}</view>
+            <view class="tips flex1">发布了心得</view>
+        </view> -->
+        <swiper indicator-dots="{{true}}" style='height:{{swiperHeight}}rpx'>
+          <block wx:for="{{tipDetails.image}}" wx:if="{{tipDetails.image}}">
+            <swiper-item>
+              <image bindtap="bindPreview" bindload="loadPreview" data-index="{{index}}" mode="widthFix" src="{{item}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+        <view class="goodsName flex-center">{{tipDetails.title}}</view>
+        <!-- <image bindtap="bindPreview" class="img flex" data-index="{{index}}" mode="widthFix" src="{{item}}" wx:if="{{tipDetails.image}}" wx:for="{{tipDetails.image}}"></image> -->
+        <view class="name">
+        <text>{{tipDetails.description}}</text>
+        </view>
+        <view class="tag-content">
+            <view class="tag" wx:for="{{tipDetails.tab}}">
+            <image src='../../resource/images/icon_j.png'></image>
+            {{item.tab_name}}</view>
+        </view>
+        <view class='add-time'>{{addToTime}}</view>
+        <!-- <view class="iconHot flex-center-spa border_t">
+            <view class="iconRow flex-center">
+                <view catchtap="bindCollectTap" class="collectBox">
+                    <image class="likeicon" src="../../resource/images/index/sc.png" wx:if="{{!hadCollect}}"></image>
+                    <image class="likeicon" src="../../resource/images/index/hadsc.png" wx:if="{{hadCollect}}"></image>
+                </view>
+                <view>
+                    <view bindtap="bindShareTap" class="shareBtn ab" data-statu="open" data-tipid="{{tipId}}"></view>
+                    <image class="icon" src="../../resource/images/index/fenxiang.png"></image>
+                </view>
+                <image bindtap="allComments" class="icon" data-tipid="{{tipId}}" src="../../resource/images/index/pinglun.png"></image>
+                <view class="flex-center">
+                    <image catchtap="clickLike" class="likeicon" data-tipid="{{tipId}}" src="../../resource/images/index/dianzan.png"></image>
+                    <view class="zanNum">{{tipLike}}</view>
+                </view>
+            </view>
+            <view class="hot">{{tipDetails.views}}热度</view>
+        </view> -->
+    </view>
+    <view class="no" wx:if="{{commentsList.length==0}}">暂无评论</view>
+    <view class="commentsList">
+        <view class='comments-number'>共{{commentsList.length}}条评论</view>
+        <view class="commItem border_b" wx:if="{{commentsList.length!=0}}" wx:for="{{commentsList}}">
+            <view class="flex-center">
+                <image class="header" src="{{item.avatar}}"></image>
+                <view class="nick flex1">{{item.nickname}}</view>
+            </view>
+            <view class="comcontents">{{item.content}}<text class="commTime">{{item.addtime}}</text></view>
+            <!-- <view class='heat'>
+              <image src='../../resource/images/icon_heat.png'></image>
+              <view class='text'>22</view>
+            </view> -->
+        </view>
+        <view class="moreComm" catchtap='moreListCom' wx:if="{{commentsList.length==3&&isShowMore}}">展开评论 <image class='down-arr' src='../../resource/images/down-arr.png'></image></view>
+    </view>
+</view>
+<view class="wall"></view>
+<view class="box">
+    <view class="comment flex-center">
+        <image catchtap="backHome" wx:if="{{isShowIndexBack}}" class="backIcon flex1" src="../../resource/images/index-icon.png"></image>
+        <view class="commentBox flex1 flex-center">
+            <image class='comment-notes' src='../../resource/images/notes.png'></image>
+            <input bindinput="input" class="input" placeholder="来说点什么吧~" value="{{content}}"></input>
+            <view bindtap="sendComment" class="deter" data-tipid="{{tipId}}">发表</view>
+            <view class='flex-center'>
+              <view class='icon-leave'>
+                <image catchtap="clickLike" data-tipid="{{tipId}}" src='../../resource/images/icon_h_active2.png'></image>
+                <view class='text'>{{tipLike}}</view>
+              </view>
+              <view catchtap="bindCollectTap" class='icon-leave'>
+                <image wx:if="{{!hadCollect}}" src='../../resource/images/collection-icon.png'></image>
+                <image wx:if="{{hadCollect}}" src='../../resource/images/collection-active.png'></image>
+                <view class='text'>{{collection}}</view>
+              </view>
+              <!--allComments  -->
+              <view class='icon-leave' bindtap="moreListCom" data-tipid="{{tipId}}">
+                <image src='../../resource/images/leave-message.png'></image>
+                <view class='text'>{{commentsList.length}}</view>
+              </view>
+            </view>
+            
+        </view>
+    </view>
+</view>
+<login bindwatch="updateUserInfo" login="true"></login>
+<poster bind:create="getposterurl" posterInfo="{{posterinfo}}"></poster>
+<view bindtap="close" class="drawer_screen" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+    <button class="shareFriend" data-tipid="{{tipId}}" openType="share">发给好友</button>
+    <view bindtap="showPoster" class="actionList border_t" data-tipid="{{tipId}}">生成卡片</view>
+    <view bindtap="close" class="actionList" data-statu="close">取消</view>
+</view>

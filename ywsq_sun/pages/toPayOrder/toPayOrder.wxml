@@ -1,0 +1,71 @@
+<view>
+    <button bindopensetting="bindopensetting" bindtap="selectAddress" class="kuaidiAddress flex-center" openType="openSetting" wx:if="{{!addressAuth&&!changeAddress}}">
+        <image class="positionIcon" src="../../resource/images/index/dizhi.png"></image>
+        <view class="flex1">选择收货地址</view>
+        <image class="arrow" src="../../resource/images/index/jiantou.png"></image>
+        <image class="bottomBorder" src="../../resource/images/index/biankuang.jpg"></image>
+    </button>
+    <button bindtap="selectAddress" class="kuaidiAddress flex-center" wx:if="{{addressAuth&&!changeAddress}}">
+        <image class="positionIcon" src="../../resource/images/index/dizhi.png"></image>
+        <view class="flex1">选择收货地址</view>
+        <image class="arrow" src="../../resource/images/index/jiantou.png"></image>
+        <image class="bottomBorder" src="../../resource/images/index/biankuang.jpg"></image>
+    </button>
+    <view bindtap="selectAddress" class="kuaidiAddress flex-center" wx:if="{{changeAddress}}">
+        <image class="positionIcon" src="../../resource/images/index/dizhi.png"></image>
+        <view class="flex1">
+            <view class="name-number">
+                <view>收货人：{{userAddress.userName}}</view>
+                <view>{{userAddress.telNumber}}</view>
+            </view>
+            <view class="shipping-address">
+        收货地址：{{userAddress.provinceName}}{{userAddress.cityName}}{{userAddress.countyName}}{{userAddress.detailInfo}}
+      </view>
+        </view>
+        <image class="bottomBorder" src="../../resource/images/index/biankuang.jpg"></image>
+    </view>
+    <view class="item">
+        <view class="title flex-center-spa"></view>
+        <view class="buyMesBox flex" wx:for="{{cartList}}" wx:for-item="product">
+            <image class="goodsImg" src="{{product.original_img}}"></image>
+            <view class="flex1">
+                <view class="goodsName dot">{{product.goods_name}}</view>
+                <view class="guige flex-center-spa">
+                    <view>{{product.sku_name}}</view>
+                    <view class="singleP">¥{{product.goods_price}}</view>
+                </view>
+                <view class="num">X{{product.goods_num}}</view>
+                <view class="totalP">合计：¥{{product.price_total}}</view>
+            </view>
+        </view>
+        <view class="row flex-center-spa border_b">
+            <view class="type">配送方式</view>
+            <view class="way">默认快递</view>
+        </view>
+        <view class="row flex-center-spa border_b">
+            <view class="type">合计金额</view>
+            <view class="money">¥{{totalPay}}</view>
+        </view>
+        <view class="row flex-center-spa">
+            <view class="type">优惠券</view>
+            <view class="way flex-center" wx:if="{{coupon==0}}">
+                <view>无可用优惠券</view>
+                <image class="arrow" src="../../resource/images/index/jiantou.png"></image>
+            </view>
+            <view bindtap="changeCoupon" class="way flex-center" wx:if="{{coupon>0}}">
+                <view wx:if="{{coupon_id==0}}">可用{{coupon}}张优惠券</view>
+                <view class="money" wx:if="{{coupon_id}}">优惠￥{{coupon_money}}</view>
+                <image class="arrow" src="../../resource/images/index/jiantou.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="footerBox">
+        <view class="footer flex-center">
+            <view class="leftBox flex-center-cen flex1">
+                <view class="addText">合计：</view>
+                <view class="addMoney">¥{{amountPay}}</view>
+            </view>
+            <view bindtap="postOrder" class="pushBtn">确认支付</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "login": "/ywsq_sun/pages/modal/login",
+        "poster": "/ywsq_sun/pages/SecShopPoster/SecShopPoster"
+    }
+}

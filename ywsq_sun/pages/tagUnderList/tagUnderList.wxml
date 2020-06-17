@@ -1,0 +1,36 @@
+<view class="no" wx:if="{{foundList.length==0}}">该标签下暂无心得及问题</view>
+<view class="foundList">
+    <view bindtap="goDetails" class="itemBox border_b" data-quesid="{{item.question_id}}" data-tipid="{{item.heart_id}}" wx:for="{{foundList}}">
+        <view class="writerMes flex-center rel">
+            <view>
+                <image class="header" src="{{item.avatar}}"></image>
+            </view>
+            <view class="nickName dot">{{item.nickname}}</view>
+            <view class="tips flex1" wx:if="{{item.type==1}}">发布了问题</view>
+            <view class="tips flex1" wx:if="{{item.type==2}}">发布了心得</view>
+        </view>
+        <image class="img flex" src="{{item.image[0]}}" wx:if="{{item.image}}"></image>
+        <view class="name">{{item.title}}</view>
+        <view class="flex-center">
+            <view class="tag" wx:for="{{item.tab}}" wx:for-item="items">#{{items.tab_name}}#</view>
+        </view>
+        <view class="iconHot flex-center-spa border_t">
+            <view class="iconRow flex-center">
+                <image class="icon" src="../../resource/images/index/pinglun.png" wx:if="{{item.type==2}}"></image>
+                <view class="iconBox flex-center" wx:if="{{item.type==2}}">
+                    <image class="likeicon" src="../../resource/images/index/dianzan.png"></image>
+                    <view class="num">{{item.favour}}</view>
+                </view>
+                <view class="iconBox flex-center" wx:if="{{item.type==1}}">
+                    <image class="likeicon" src="../../resource/images/index/hd.png"></image>
+                    <view class="num1">{{item.answer}}</view>
+                </view>
+                <view class="iconBox flex-center" wx:if="{{item.type==1}}">
+                    <image class="likeicon" src="../../resource/images/index/sc.png"></image>
+                    <view class="num1">{{item.collection}}</view>
+                </view>
+            </view>
+            <view class="hot" wx:if="{{item.type==2}}">{{item.views}}热度</view>
+        </view>
+    </view>
+</view>

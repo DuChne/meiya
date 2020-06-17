@@ -1,0 +1,93 @@
+.recommTag {
+    background-color: #fff;
+    padding: 20rpx;
+    margin: 20rpx 0 0;
+}
+
+.tag {
+    padding: 20rpx;
+    background-color: #fff;
+}
+
+.tagTitle {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.more {
+    width: 10rpx;
+    height: 20rpx;
+    margin: 0 0 0 15rpx;
+}
+
+.tagBox {
+    margin: 20rpx 0 0 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.tagItem {
+    width: 224rpx;
+    height: 160rpx;
+    margin: 0 18rpx 0 0;
+}
+
+.tagImg {
+    width: 224rpx;
+    height: 160rpx;
+}
+
+.tagBorder {
+    width: 180rpx;
+    height: 96rpx;
+    border: 5rpx solid #fff;
+    top: 32rpx;
+    left: 22rpx;
+    text-align: center;
+    line-height: 96rpx;
+    box-sizing: border-box;
+}
+
+.tagName {
+    font-size: 35rpx;
+    font-weight: bold;
+    color: #fff;
+}
+
+.arrow {
+    width: 10rpx;
+    height: 20rpx;
+    margin: 0 0 0 15rpx;
+}
+
+.down {
+    transform: rotate(90deg);
+}
+
+.upp {
+    transform: rotate(270deg);
+}
+
+.tagClassic {
+    margin: 20rpx 0 0;
+    padding: 40rpx 0 30rpx;
+    background-color: #fff;
+}
+
+.classicT {
+    margin: 0 20rpx;
+}
+
+.classDeta {
+    flex-wrap: wrap;
+}
+
+.classitem {
+    min-width: 200rpx;
+    height: 60rpx;
+    background: rgba(249,251,244,1);
+    line-height: 60rpx;
+    font-size: 30rpx;
+    color: #333;
+    margin: 30rpx 20rpx 0;
+}

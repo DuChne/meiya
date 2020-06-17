@@ -1,0 +1,11 @@
+<view class="wall"></view>
+<view class="fansList">
+    <view class="no" wx:if="{{focusList.length==0}}">暂时未关注任何人</view>
+    <view bindtap="goHisHome" class="writerMes border_b flex-center rel" data-userid="{{item.user_id}}" wx:for="{{focusList}}">
+        <image class="header" src="{{item.avatar}}"></image>
+        <view class="flex-center flex1">
+            <view class="nickName dot1">{{item.nickname}}</view>
+        </view>
+        <view catchtap="cancleFocus" class="focus" data-index="{{index}}" data-statu="open" data-userid="{{item.user_id}}">取消</view>
+    </view>
+</view>

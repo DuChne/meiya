@@ -1,0 +1,10 @@
+<view class="wall"></view>
+<view class="bigWrap">
+    <form>
+        <view class="formBox rel border_b">
+            <textarea bindinput="bindInput" class="textArea" maxlength="500" placeholder="请输入评论" placeholderClass="diyHolder"></textarea>
+            <view class="numText ab">{{numText}}/500</view>
+        </view>
+        <button class="release center" formType="submit">发布</button>
+    </form>
+</view>

@@ -1,0 +1,81 @@
+page {
+    background-color: #fff;
+}
+
+.bigWrap {
+    padding: 20rpx;
+}
+
+.formBox {
+    min-height: 354rpx;
+}
+
+.diyHolder {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.textArea {
+    width: 100%;
+    height: 264rpx;
+}
+
+.xjBox {
+    width: 50rpx;
+    height: 40rpx;
+}
+
+.camera {
+    width: 50rpx;
+    height: 40rpx;
+    right: 40rpx;
+    bottom: 20rpx;
+}
+
+.release {
+    width: 450rpx;
+    height: 84rpx;
+    background-color: #030200;
+    color: #fff;
+    line-height: 84rpx;
+    border-radius: 0;
+    margin: 94rpx auto;
+}
+
+button::after {
+    border: none;
+}
+
+.upload {
+    height: auto;
+    background: #fff;
+    padding: 0 0 10rpx;
+    flex-wrap: wrap;
+}
+
+.content_add {
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 20rpx 20rpx 0;
+}
+
+.deleteImage {
+    width: 40rpx;
+    height: 40rpx;
+    z-index: 5;
+    right: 0;
+    top: 0;
+}
+
+.close {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.add_img {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 10rpx;
+    display: flex;
+    border: 1rpx solid #eee;
+}

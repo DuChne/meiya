@@ -1,0 +1,7 @@
+<button bindtap="btnClick" type="primary"> 点我下去 </button>
+<button bindtap="btnClickTo" type="primary"> 点我回去 </button>
+<view animation="{{animation}}" class="body-view">
+    <view>我一会就出来吓死你</view>
+    <view>我一会就出来吓死你</view>
+    <view>我一会就出来吓死你</view>
+</view>

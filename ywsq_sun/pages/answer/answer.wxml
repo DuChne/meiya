@@ -1,0 +1,20 @@
+<view class="wall"></view>
+<view class="bigWrap">
+    <form bindsubmit="publish" reportSubmit="true">
+        <view class="formBox rel border_b">
+            <textarea class="textArea" maxlength="500" name="desc" placeholder="请输入回答" placeholderClass="diyHolder"></textarea>
+            <view class="upload flex">
+                <view bindtap="previewImage" class="content_add rel" data-index="{{index}}" data-list="{{pics}}" wx:for="{{pics}}" wx:key="*this">
+                    <view catchtap="deleteImage" class="deleteImage ab" data-index="{{index}}">
+                        <image class="close ab" mode="widthFix" src="../../resource/images/index/close.png"></image>
+                    </view>
+                    <image class="add_img" mode="aspectFill" src="{{item}}"></image>
+                </view>
+            </view>
+            <view class="xjBox">
+                <image bindtap="chooseImage" class="camera ab" src="../../resource/images/index/xiangji.png"></image>
+            </view>
+        </view>
+        <button class="release center" formType="submit">发布</button>
+    </form>
+</view>

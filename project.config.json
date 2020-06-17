@@ -1,0 +1,174 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wxfab126d3e96cc1b6",
+	"projectname": "wxappa",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 17,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/askList/askList",
+					"pathName": "ywsq_sun/pages/askList/askList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/ask/ask",
+					"pathName": "ywsq_sun/pages/ask/ask",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/tipDetails/tipDetails",
+					"pathName": "ywsq_sun/pages/tipDetails/tipDetails",
+					"query": "tipId=32",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "ywsq_sun/pages/tipDetails/tipDetails",
+					"pathName": "ywsq_sun/pages/tipDetails/tipDetails",
+					"query": "tipId=6604&referrer=noteDetails",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/shopping/shopping",
+					"pathName": "ywsq_sun/pages/shopping/shopping",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/goodsDetail/goodsDetail",
+					"pathName": "ywsq_sun/pages/goodsDetail/goodsDetail",
+					"query": "id=4",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/doctorConsultation/index",
+					"pathName": "ywsq_sun/pages/doctorConsultation/index",
+					"query": "id=4",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/consultationRecord/index",
+					"pathName": "ywsq_sun/pages/consultationRecord/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "ywsq_sun/pages/doctorAnswer/index",
+					"pathName": "ywsq_sun/pages/doctorAnswer/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/mine/mine",
+					"pathName": "ywsq_sun/pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/found/found",
+					"pathName": "ywsq_sun/pages/found/found",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/hisHome/hisHome",
+					"pathName": "ywsq_sun/pages/hisHome/hisHome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/index/index",
+					"pathName": "ywsq_sun/pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/doctorConsultation/index",
+					"pathName": "ywsq_sun/pages/doctorConsultation/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "ywsq_sun/pages/doctorAnswer/index",
+					"pathName": "ywsq_sun/pages/doctorAnswer/index",
+					"query": "userid=0&doctor_id=22405&name=宋磊&positionName=医师",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/mine/mine",
+					"pathName": "ywsq_sun/pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/doctorConsultation/index",
+					"pathName": "ywsq_sun/pages/doctorConsultation/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ywsq_sun/pages/hisHome/hisHome",
+					"pathName": "ywsq_sun/pages/hisHome/hisHome",
+					"query": "userId=631",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,5 @@
+@import "../answer/answer.wxss";
+
+.numText {
+    right: 0;
+}

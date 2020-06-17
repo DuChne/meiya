@@ -1,0 +1,46 @@
+<view class="orderList">
+    <view class="item" wx:for="{{cartList}}">
+        <view class="title">
+            <image bindtap="delProduct" class="delete" data-id="{{item.id}}" src="../../resource/images/index/delete.png"></image>
+        </view>
+        <view bindtap="selectProduct" class="buyMesBox flex" data-checked-status="{{checkedStatus}}" data-id="{{item.cart_id}}">
+            <view class="radioBox flex-center">
+                <radio checked="true" class="radio" color="#333" wx:if="{{item.selected==1}}"></radio>
+                <radio class="radio" color="#333" wx:if="{{item.selected==0}}"></radio>
+            </view>
+            <image class="goodsImg" src="{{item.original_img}}"></image>
+            <view class="flex1">
+                <view class="goodsName dot">{{item.goods_name}}</view>
+                <view class="guige flex-spa">
+                    <view>{{item.sku_name}}</view>
+                    <view class="singleP">¥{{item.goods_price}}</view>
+                </view>
+                <view class="num">X{{item.goods_num}}</view>
+                <view class="totalP">合计：¥{{item.price_total}}</view>
+            </view>
+        </view>
+        <view class="btnRow flex-center">
+            <view class="num-box">
+                <view catchtap="changeNumber" class="num-jian {{item.decr_class}}" data-id="{{item.cart_id}}" data-type="min">-</view>
+                <view class="num-input">
+                    <input disabled name="num" type="number" value="{{item.goods_num}}"></input>
+                </view>
+                <view catchtap="changeNumber" class="num-jia {{item.plus_class}}" data-id="{{item.cart_id}}" data-type="plus">+</view>
+            </view>
+        </view>
+    </view>
+    <view class="footerBox">
+        <view class="footer flex-center-spa">
+            <view class="leftAll flex-center">
+                <radio bindtap="selectProduct" checked="true" class="radio" color="#333" data-checked-status="{{checkedStatus}}" data-id="0" wx:if="{{checkedStatus}}"></radio>
+                <radio bindtap="selectProduct" class="radio" color="#333" data-checked-status="{{checkedStatus}}" data-id="0" wx:if="{{!checkedStatus}}"></radio>
+                <view>全选</view>
+            </view>
+            <view class="rightAll flex-center">
+                <view class="totalText">合计：</view>
+                <view class="priceTot">¥{{buyPrice}}</view>
+                <view bindtap="toSettlement" class="settleBtn">结算</view>
+            </view>
+        </view>
+    </view>
+</view>

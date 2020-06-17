@@ -1,0 +1,16 @@
+<view>
+    <view class="yh_box">
+        <view>
+            <view class="yhq_item border_b" wx:for="{{couponList}}" wx:for-item="coupon">
+                <view class="yhq_box">
+                    <image class="yhqBj" src="../../resource/images/index/youhuiquanbj.png"></image>
+                    <text class="yhq_num rel">{{coupon.name}}</text>
+                    <view class="yhq_intro flex-center-spa rel">
+                        <view class="dot flex1">优惠￥{{coupon.money}}</view>
+                        <view bindtap="useCoupon" class="mkbtn" data-coupon-id="{{coupon.id}}">使用</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

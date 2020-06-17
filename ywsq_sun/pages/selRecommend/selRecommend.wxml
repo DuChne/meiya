@@ -1,0 +1,13 @@
+<view class="bigBox">
+    <view class="title">{{seleDetails.title}}</view>
+    <view class="authorMes flex-center">
+        <view class="author">来自：{{seleDetails.from}}</view>
+        <view class="time">发布时间：{{seleDetails.addtime}}</view>
+    </view>
+    <view>
+        <view class="richText">
+            <rich-text nodes="{{seleDetails.content}}"></rich-text>
+        </view>
+    </view>
+    <view bindtap="goodsDetail" class="buySel" data-goodsid="{{seleDetails.goods_id}}" wx:if="{{seleDetails.goods_id!=0}}">去购买推荐商品</view>
+</view>

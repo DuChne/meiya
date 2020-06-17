@@ -1,0 +1,32 @@
+<view class="bigWrap">
+    <view class="topBox">
+        <image class="bj" src="../../resource/images/index/bj.png"></image>
+        <view class="yhqBox ab">
+            <view class="topBj ab">
+                <image class="getYhq ab" src="../../resource/images/index/topbj.png"></image>
+                <view class="get rel">兑换优惠券</view>
+            </view>
+            <image class="yhqbj ab" src="../../resource/images/index/yhqbj.png"></image>
+            <view class="yhqList flex-center-cen rel">
+                <view bindtap="selectOne" class="yhqItem flex-center-col {{currIdx==index?'active':''}}" data-couponid="{{item.id}}" data-index="{{index}}" wx:for="{{couponsList}}">
+                    <view class="numRow flex-end">
+                        <view class="yhqNum">{{item.money}}</view>
+                        <view class="danwei">元</view>
+                    </view>
+                    <view class="type">满{{item.condition}}可用</view>
+                </view>
+            </view>
+            <view bindtap="exchangeNow">
+                <view class="getBtn rel" wx:if="{{!click}}">立即兑换</view>
+                <view class="getBtn rel" wx:if="{{click}}">{{couponsList[currIdx].integral}}积分兑换</view>
+            </view>
+            <view class="mineJifen rel">我的签到积分：{{info.integral}}分</view>
+        </view>
+    </view>
+    <view class="ruleWrap">
+        <view class="title">签到积分兑换优惠券规则</view>
+        <view class="ruleBox">
+            <text class="ruleText">{{info.exchange_rule}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,38 @@
+.bigBox {
+    background-color: #fff;
+    margin: 20rpx 0;
+    padding: 20rpx 20rpx 30rpx;
+}
+
+.authorMes {
+    font-size: 24rpx;
+    color: #999;
+    line-height: 24rpx;
+    margin: 10rpx 0 30rpx;
+}
+
+.time {
+    margin: 0 0 0 16rpx;
+}
+
+.buySel {
+    width: 450rpx;
+    height: 80rpx;
+    border: 1rpx solid #000;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 78rpx;
+    background: rgba(255,255,255,1);
+    margin: 30rpx auto 0;
+    font-size: 32rpx;
+}
+
+.richImg {
+    width: 100%;
+}
+
+.richText {
+    font-size: 26rpx;
+    color: #999;
+    margin: 20rpx 0 0;
+}

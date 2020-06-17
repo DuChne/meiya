@@ -1,0 +1,135 @@
+.wall {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.scrollView {
+    width: 100%;
+    height: 90rpx;
+    background-color: #fff;
+    white-space: nowrap;
+    position: fixed;
+    top: 20rpx;
+}
+
+.scrollBox {
+    min-width: 100%;
+    display: inline-block;
+}
+
+.type-navbar {
+    height: 90rpx;
+    box-sizing: border-box;
+}
+
+.type-box {
+    margin: 0 40rpx 0 20rpx;
+    line-height: 84rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.type-navbar-item {
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30rpx;
+}
+
+.type-navbar-item.type-item-on {
+    box-sizing: border-box;
+    border-bottom: 6rpx solid #000;
+}
+
+.askList {
+    margin: 110rpx 0 0;
+    overflow-y: scroll;
+}
+
+.askItem {
+    margin: 0 0 20rpx;
+    background-color: #fff;
+}
+
+.headerRow {
+    padding: 20rpx;
+}
+
+.header {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 100%;
+}
+
+.name {
+    margin: 0 20rpx 0 30rpx;
+}
+
+.ask {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.wen {
+    width: 30rpx;
+    height: 30rpx;
+    background-color: #F86738;
+    color: #fff;
+    font-size: 24rpx;
+    margin: 0 20rpx 0 0;
+    text-align: center;
+    line-height: 30rpx;
+}
+
+.wenRow {
+    margin: 0 20rpx 30rpx;
+}
+
+.tagRow {
+    margin: 0 20rpx 30rpx;
+}
+
+.tag {
+    color: #0A1D53;
+    font-size: 28rpx;
+    margin: 0 20rpx 0 0;
+}
+
+.answerRow {
+    height: 90rpx;
+    box-sizing: border-box;
+    padding: 0 20rpx;
+}
+
+.meAns {
+    width: 160rpx;
+    height: 50rpx;
+    border-radius: 10rpx;
+    border: 1rpx solid #000;
+    text-align: center;
+    line-height: 50rpx;
+}
+
+.iconBox {
+    margin: 0 50rpx 0 0;
+    color: #999;
+}
+
+.iconbBox {
+    color: #999;
+}
+
+.iconB {
+    width: 40rpx;
+    height: 40rpx;
+    margin: 0 20rpx 0 0;
+}
+
+.iconA {
+    width: 40rpx;
+    height: 35rpx;
+    margin: 0 20rpx 0 0;
+}

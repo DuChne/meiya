@@ -1,0 +1,186 @@
+.daily {
+    padding: 0 20rpx;
+    margin: 20rpx 0;
+    background-color: #fff;
+}
+
+.tagTitle {
+    height: 64rpx;
+    color: #999;
+    font-size: 26rpx;
+}
+
+.more {
+    width: 10rpx;
+    height: 20rpx;
+    margin: 0 0 0 15rpx;
+}
+
+.moreText {
+    line-height: 60rpx;
+}
+
+.sImg {
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 20rpx 0 0;
+}
+
+.arrow {
+    width: 20rpx;
+    height: 30rpx;
+    margin: 0 0 0 20rpx;
+}
+
+.dailyItem {
+    height: 70rpx;
+    width: 100%;
+}
+
+.dailyText {
+    color: #000;
+}
+
+.classic {
+}
+
+.scrollView {
+    width: 100%;
+    height: 90rpx;
+    background-color: #fff;
+    white-space: nowrap;
+}
+
+.foundItem {
+    margin: 0 0 20rpx;
+    background-color: #fff;
+}
+
+.scrollBox {
+    min-width: 100%;
+    display: inline-block;
+}
+
+.type-navbar {
+    height: 90rpx;
+    box-sizing: border-box;
+}
+
+.type-box {
+    margin: 0 40rpx 0 20rpx;
+    line-height: 84rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.type-navbar-item {
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30rpx;
+}
+
+.type-navbar-item.type-item-on {
+    box-sizing: border-box;
+    border-bottom: 6rpx solid #000;
+}
+
+.tabItem.active {
+    border-bottom: 6rpx solid #000;
+    box-sizing: border-box;
+}
+
+.tabItem:first-child {
+    margin: 0 106rpx 0 20rpx;
+}
+
+.writerMes {
+    padding: 0 20rpx;
+    height: 120rpx;
+}
+
+.header {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 100%;
+}
+
+.focus {
+    width: 100rpx;
+    height: 40rpx;
+    background: rgba(0,0,0,1);
+    border-radius: 20rpx;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 40rpx;
+    right: 20rpx;
+}
+
+.nickName {
+    color: #000;
+    margin: 0 20rpx 0 30rpx;
+}
+
+.tips {
+    font-size: 26rpx;
+    color: #999;
+    margin: 0 20rpx 0 0;
+}
+
+.img {
+    width: 100%;
+    height: 360rpx;
+}
+
+.tag {
+    color: #0a1d53;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    padding: 0 20rpx 24rpx;
+}
+
+.name {
+    padding: 0 20rpx;
+    margin: 20rpx 0 17rpx;
+    line-height: 30rpx;
+}
+
+.iconHot {
+    height: 80rpx;
+    margin: 0 20rpx;
+}
+
+.iconBox {
+    height: 40rpx;
+    margin: 0 50rpx 0 0;
+}
+
+.icon {
+    width: 45rpx;
+    height: 40rpx;
+    margin: 0 50rpx 0 0;
+}
+
+.likeicon {
+    width: 45rpx;
+    height: 40rpx;
+}
+
+.hot {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.num {
+    font-size: 24rpx;
+    color: #999;
+    margin: -20rpx -20rpx 0 0;
+}
+
+.num1 {
+    color: #999;
+    margin: 0 0 0 20rpx;
+}

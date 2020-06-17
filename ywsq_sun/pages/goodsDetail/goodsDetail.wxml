@@ -1,0 +1,84 @@
+<import src="../../wxParse/wxParse.wxml"></import>
+<view>
+    <view class="top">
+        <swiper circular autoplay="{{autoplay}}" class="swiper" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}">
+            <swiper-item wx:for="{{banners}}">
+                <image class="slide-image" src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+        <view class='goods-info-share'>
+          <view class="goods-name">{{goodsInfo.goods_name}}</view>
+          <button class='share' open-type='share'>
+            <image src='../../resource/images/share-shopping.png'></image>
+          </button>
+        </view>
+        <view class="priceRow">
+            <view class="curr">¥{{goodsInfo.shop_price}}</view>
+            <view class="orig">¥{{goodsInfo.market_price}}</view>
+        </view>
+        <view class='label-content'>
+          <text class='label'>限时促销</text>
+        </view>
+        <view class='express-delivery'>
+          <view class='express'>快递: 0.00</view>
+          <view class='sales'>月销: 88</view>
+          <view class='address'>广州</view>
+        </view>
+    </view>
+    <view class="mid">
+        <!-- <view class="title border_b">产品详情</view> -->
+        <view class="details">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+        </view>
+    </view>
+    <view class="footerBox">
+        <view class="footer flex">
+            <view class="flex1 flex-center">
+              <view class='icon-list' bindtap="backIndex">
+                <image class="icon" src="../../resource/images/index-icon.png"></image>
+                <view class='text'>首页</view>
+              </view>
+              <button class='icon-list' open-type='contact'>
+                <image class='service icon' src='../../resource/images/service-icon.png'></image>
+                <view class='text'>客服</view>
+              </button>
+              <!-- <view bindtap="navigateToCart" class="rel">
+                  <image class="cart flex" src="../../resource/images/index/gouwuche.png"></image>
+                  <view class="cartNum ab">{{goodsInfo.cartNum}}</view>
+              </view> -->
+              <view bindtap="joinCartTap" class="joinCart btn" data-statu="open">加入购物车</view>
+              <view bindtap="buyNowTap" class="buyNow btn" data-statu="open">立即购买</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="close" class="drawer_screen" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="guigeBox" wx:if="{{showModalStatus}}">
+    <view class="closeBox">
+        <image bindtap="close" class="close" data-statu="close" src="../../resource/images/index/cha.png"></image>
+    </view>
+    <view class="guigeMes border_b flex-center-col">
+        <image class="goodsImg" src="{{goodsInfo.original_img}}"></image>
+        <view class="guigeP">¥{{goodsInfo.shop_price}}</view>
+        <view class="remainNum">库存{{goodsInfo.store_count}}件</view>
+    </view>
+    <view class="size-label-box border_b">
+        <block wx:for="{{goods_attr}}" wx:for-index="goods_key" wx:for-item="attr_item">
+            <view class="label">{{attr_item.attr}}</view>
+            <view class="label-item-box">
+                <view bindtap="labelItemTap" class="label-item {{val_item.active==1?'active':''}} " data-attr-key="{{goods_key}}" data-vid="{{val_item.vid}}" wx:for="{{attr_item.attr_val}}" wx:for-item="val_item">{{val_item.name}}</view>
+            </view>
+        </block>
+    </view>
+    <view class="buyBox flex-center-spa">
+        <view>购买数量</view>
+        <view class="num-box">
+            <view catchtap="numJianTap" class="num-jian {{buyNumber==1?'disabled':''}}" data-crid="{{items.id}}">-</view>
+            <view class="num-input">
+                <input disabled name="num" type="number" value="{{buyNumber}}"></input>
+            </view>
+            <view catchtap="numJiaTap" class="num-jia {{buyNumber==10?'disabled':''}}" data-crid="{{items.id}}">+</view>
+        </view>
+    </view>
+    <view bindtap="submit" class="deterBtn">确定</view>
+</view>

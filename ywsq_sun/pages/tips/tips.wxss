@@ -1,0 +1,229 @@
+page {
+    background-color: #fff;
+}
+.add-title{
+  height: 82rpx;
+  line-height: 82rpx;
+  width: 702rpx;
+  margin: 0 auto;
+  display: block;
+  border-bottom: 1rpx solid #E0E0E0;
+}
+.say-somethening{
+  height: 288rpx;
+  border-bottom: 1rpx solid #E0E0E0;
+  width: 702rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 22rpx;
+}
+.topic{
+  border-bottom: 1rpx solid #E0E0E0;
+  width: 702rpx;
+  margin: 0 auto;
+  height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.topic .topic-icon{
+  width: 32rpx;
+  height: 32rpx;
+  display: block;
+  margin-right: 12rpx;
+}
+.topic .topic-title{
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #999999;
+}
+.topic .to-arraw{
+  width: 45rpx;
+  height: 45rpx;
+  display: block;
+}
+.formBox {
+    padding: 20rpx;
+}
+
+.addImg {
+    height: 110rpx;
+    background-color: #E5E4E4;
+    margin: 0 0 20rpx;
+}
+
+.addText {
+    color: #999;
+    font-size: 26rpx;
+}
+
+.camera {
+    width: 50rpx;
+    height: 40rpx;
+    margin: 0 40rpx 0 0;
+}
+
+.title {
+    font-size: 28rpx;
+    line-height: 28rpx;
+    color: #333;
+}
+
+.input {
+    padding: 0 0 10rpx 0;
+    margin: 0 0 30rpx 0;
+}
+
+.textArea {
+    margin: 14rpx 0 0 0;
+}
+
+.claTag {
+    font-size: 28rpx;
+    color: #000;
+    min-width: 150rpx;
+    height: 40rpx;
+    border-radius: 20rpx;
+    border: 1rpx solid #000;
+    margin: 0 30rpx 0 0;
+    padding: 0 10rpx;
+}
+
+.diyHolder {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.tag {
+    padding: 20rpx 0 0 0;
+}
+
+.release {
+    width: 450rpx;
+    height: 84rpx;
+    background-color: #030200;
+    color: #fff;
+    line-height: 84rpx;
+    border-radius: 0;
+    margin: 94rpx auto;
+}
+
+button::after {
+    border: none;
+}
+
+.close {
+    top: -20rpx;
+    right: 10rpx;
+}
+
+.upload {
+    height: auto;
+    background: #fff;
+    padding: 20rpx 0 0;
+    flex-wrap: wrap;
+}
+
+.content_add {
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 20rpx 20rpx 0;
+}
+
+.deleteImage {
+    width: 40rpx;
+    height: 40rpx;
+    z-index: 5;
+    right: 0;
+    top: 0;
+}
+
+.closeIcon {
+    width: 40rpx;
+    height: 40rpx;
+}
+.add-file{
+  width: 702rpx;
+  margin-left: 24rpx;
+  padding-top: 36rpx;
+  border-bottom: 1rpx solid #E0E0E0;
+}
+.add-title-img{
+  color: #999999;
+  font-size: 26rpx;
+  line-height: 1em;
+  padding-bottom: 44rpx;
+}
+.add-file-content{
+  display: flex;
+  flex-flow: wrap;
+}
+.add-file-content .file-img{
+  width: 180rpx;
+  height: 180rpx;
+  position: relative;
+  margin-right: 52rpx;
+  margin-bottom: 44rpx;
+}
+.draft-img{
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+}
+.add-file-content .close-img{
+  position: absolute;
+  right: -21rpx;
+  top: -21rpx;
+  width: 42rpx;
+  height: 42rpx;
+  display: block;
+}
+.add_img {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 10rpx;
+    display: flex;
+    border: 1rpx solid #eee;
+}
+.add-storage{
+  height: 123rpx;
+  background-color: #FFF;
+  position: relative;
+}
+.stor-notes{
+  position: fixed;
+  height: 123rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+}
+.stor-notes .draft{
+  margin-left: 64rpx;
+}
+.stor-notes .draft .icon{
+  width: 53rpx;
+  height: 53rpx;
+  display: block;
+}
+.stor-notes .draft .text{
+  color: #999999;
+  font-size: 18rpx;
+  padding-top: 8rpx;
+}
+.stor-notes .post-notes{
+  /* width: 554rpx; */
+  width: 698rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background-color: #4CD6C0;
+  text-align: center;
+  line-height: 88rpx;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  margin-right: 26rpx;
+}

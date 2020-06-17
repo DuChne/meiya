@@ -1,0 +1,49 @@
+<view>
+    <view class="ques">
+        <view class="nameRow flex-center">
+            <view catchtap="goHisHome" data-userid="{{quesDetails.user_id}}">
+                <image class="header" src="{{quesDetails.avatar}}"></image>
+            </view>
+            <view class="nick flex1 dot">{{quesDetails.nickname}}</view>
+            <view bindtap="bindCollectTap">
+                <image class="star" src="../../resource/images/index/sc.png" wx:if="{{!hadCollect}}"></image>
+                <image class="star" src="../../resource/images/index/hadsc.png" wx:if="{{hadCollect}}"></image>
+            </view>
+        </view>
+        <view class="title dot">{{quesDetails.title}}</view>
+        <image bindtap="bindPreview" class="img flex" data-index="{{index}}" mode="widthFix" src="{{item}}" wx:if="{{quesDetails.image}}" wx:for="{{quesDetails.image}}"></image>
+        <view class="desc">{{quesDetails.description}}</view>
+        <view class="flex-center">
+            <view class="tag" wx:for="{{quesDetails.tab}}">#{{item.tab_name}}#</view>
+        </view>
+        <view class="ansBox border_t flex-center-cen">
+            <view bindtap="iAnswer" class="meAns">我来回答</view>
+        </view>
+    </view>
+    <view>
+        <view class="ansTitle flex-center-cen">
+            <view class="role"></view>
+            <view class="ansText">回答列表</view>
+            <view class="role"></view>
+        </view>
+        <view class="noAnswer" wx:if="{{answerList.length==0}}">暂无回答</view>
+        <view bindtap="answerDetails" class="ansItem" data-answerid="{{item.answer_id}}" wx:if="{{answerList.length!=0}}" wx:for="{{answerList}}">
+            <view class="nameRow flex-center">
+                <image class="header" src="{{item.avatar}}"></image>
+                <view class="nick flex1 dot">{{item.nickname}}</view>
+            </view>
+            <view class="ansCont flex-center">
+                <image class="ansImg" src="{{item.image}}" wx:if="{{item.image}}"></image>
+                <view class="rightBox flex1">
+                    <view class="con dot3">{{item.description}}</view>
+                </view>
+            </view>
+            <view class="iconRow">
+                <view class="flex-center">
+                    <image class="icon" data-answerid="{{item.answer_id}}" src="../../resource/images/index/dianzan.png"></image>
+                    <view class="zanNum">{{item.favour}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
